@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <title><%= process.env.MY_APP_NAME %></title>
+        <meta charset="utf-8" />
+        <style>
+            html, body {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                font-family: var(--tui-font-family-sans-serif), sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+                scrollbar-width: thin;
+            }
+
+            ::-webkit-scrollbar {
+                background-color: var(--tui-color-background-scrollbar);
+                width: var(--tui-width-scrollbar);
+                height: var(--tui-width-scrollbar);
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: var(--tui-color-background-scrollbar);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: var(--tui-radius-scrollbar-border);
+                background-color: var(--tui-color-foreground-scrollbar);
+            }
+        </style>
+        <!-- Hotjar Tracking Code for www.internal-displacement.org -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1599334,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+
+    <body>
+        <noscript>
+            <%= process.env.MY_APP_NAME %> needs JS.
+        </noscript>
+
+        <script>
+            window.standaloneMode = true;
+        </script>
+        <div id="app-container"></div>
+        <!--
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+        -->
+    </body>
+</html>
