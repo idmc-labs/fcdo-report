@@ -187,6 +187,52 @@
             object-position: center center;
             object-fit: cover;
         }
+
+        .image-caption {
+            display: flex;
+            align-items: flex-end;
+            align-self: flex-end;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: var(--tui-spacing-large);
+            width: 100%;
+            max-width: 30rem;
+            text-align: right;
+            color: #ffffff;
+            font-size: var(--tui-font-size-small);
+
+            >* {
+                text-align: right;
+            }
+        }
+
+        &.center {
+            justify-content: center;
+
+            .image-caption {
+                display: flex;
+                align-items: center;
+                align-self: center;
+                padding: var(--tui-spacing-small) var(--tui-spacing-ultra-large);
+                max-width: 70rem;
+                text-align: center;
+                text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
+                font-size: var(--tui-font-size-large);
+                gap: var(--tui-spacing-large);
+            }
+
+            @media (max-width: 720px) {
+                .image-caption {
+                    font-size: var(--tui-font-size-medium);
+                }
+            }
+
+            @media (max-width: 420px) {
+                .image-caption {
+                    font-size: var(--tui-font-size-small);
+                }
+            }
+        }
     }
 
     .key-messages {
@@ -247,13 +293,6 @@
                 flex-direction: column;
                 flex-grow: 1;
                 gap: var(--tui-spacing-extra-small);
-
-                .svg {
-                    align-self: center;
-                    width: 100%;
-                    min-width: 20rem;
-                    max-width: 32rem;
-                }
             }
         }
 
@@ -486,9 +525,6 @@
                 }
 
                 .below-img-container {
-                    .img-container {
-                        display: flex;
-                    }
                     .descriptionImageParagraph {
                         font-size: var(--tui-font-size-extra-large);
                         font-weight: var(--tui-font-weight-bold);
@@ -572,10 +608,6 @@
                 .logo {
                     width: auto;
                     height: 2rem;
-                }
-
-                .adb-logo {
-                    height: 3rem;
                 }
             }
 

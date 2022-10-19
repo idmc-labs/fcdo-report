@@ -56,6 +56,8 @@ import {
     conclusionDescription,
     heroParagraph4,
     heroParagraph3,
+    dummyCaption,
+    dummySubCaption,
 } from './data';
 import WayForwardContent from './WayForwardContent';
 
@@ -357,13 +359,12 @@ function AsiaReport(props: Props) {
                     className={styles.background}
                     alt=""
                 />
-                {/* This code is needed for other Image caption */}
-                {/* <div className={styles.imageCaption}>
-                    {pakistanCaption}
+                <div className={styles.imageCaption}>
+                    {dummyCaption}
                     <div>
-                        {pakistanSubCaption}
+                        {dummySubCaption}
                     </div>
-                </div> */}
+                </div>
             </div>
             <section
                 className={_cs(styles.costOfDisaster, styles.section)}
@@ -440,6 +441,12 @@ function AsiaReport(props: Props) {
                     className={styles.background}
                     alt=""
                 />
+                <div className={styles.imageCaption}>
+                    {dummyCaption}
+                    <div>
+                        {dummySubCaption}
+                    </div>
+                </div>
             </div>
             <section
                 className={_cs(styles.idAccess, styles.section)}
@@ -565,6 +572,12 @@ function AsiaReport(props: Props) {
                     className={styles.background}
                     alt=""
                 />
+                <div className={styles.imageCaption}>
+                    {dummyCaption}
+                    <div>
+                        {dummySubCaption}
+                    </div>
+                </div>
             </div>
             <section
                 className={_cs(styles.wayForward, styles.section)}
