@@ -18,14 +18,25 @@ import Button from '#components/Button';
 import Header from '#components/Header';
 import TextOutput from '#components/TextOutput';
 import ButtonLikeLink from '#components/ButtonLikeLink';
-import Carousel from '#components/Carousel';
-import CarouselItem from '#components/Carousel/CarouselItem';
-import CarouselButton from '#components/Carousel/CarouselButton';
 import useBooleanState from '#hooks/useBooleanState';
 
+import spotLight1 from '#resources/img/spot-light1.jpg';
+import spotLight2 from '#resources/img/spot-light2.jpg';
+import educationImage from '#resources/img/education-image.png';
+import tableData from '#resources/img/table-data.jpg';
+import coverImage3 from '#resources/img/cover-img3.jpg';
+import barChart1 from '#resources/img/bar.png';
+import barChart2 from '#resources/img/bar2.png';
+import barChart3 from '#resources/img/bar3.png';
+import ageGender from '#resources/img/age-gender.png';
+import coverImage2 from '#resources/img/cover-img2.jpg';
+import coverImage4 from '#resources/img/cover-img4.jpg';
+import coverImage5 from '#resources/img/cover-img5.jpg';
+
+import dataGaps from '#resources/img/data-gaps.png';
 import idmcLogo from '#resources/img/idmc-white.svg';
-import heroImage from '#resources/img/hero.jpg';
 import bookCover from '#resources/img/book-cover.png';
+import bannerImg1 from '#resources/img/banner-img1.jpg';
 
 import {
     heroParagraph1,
@@ -49,15 +60,21 @@ import {
     reportLink,
     pressReleaseLink,
     idmcAddress,
-    wayForwardListItem1,
-    wayForwardListItem2,
-    wayForwardListItem3,
-    wayForwardListItem4,
     conclusionDescription,
     heroParagraph4,
     heroParagraph3,
-    dummyCaption,
-    dummySubCaption,
+    youngGirlCaption,
+    youngGirlSubCaption,
+    childrenCaption,
+    childrenSubCaption,
+    estimatedCaption,
+    studingCaption,
+    studingSubCaption,
+    descriptionCaption,
+    primarySchoolSubCaption,
+    primarySchoolCaption,
+    oldWallCaption,
+    oldWallSubCaption,
 } from './data';
 import WayForwardContent from './WayForwardContent';
 
@@ -159,6 +176,25 @@ const keyMessages = [
     {
         key: '5',
         description: 'The region already has successful initiatives to prevent, monitor, respond to and end disaster displacement that can inform future action.',
+    },
+];
+
+const wayForward = [
+    {
+        key: '1',
+        description: 'Improve the availability and quality of data on IDPs in general by establishing formal registries of IDPs, identifying IDPs when conducting surveys, and collecting better time-series data after disasters.',
+    },
+    {
+        key: '2',
+        description: 'Ensure data on IDPs is disaggregated by age, sex, disability status and other characteristics to be able to identify internally displaced children and understand their intersecting vulnerabilities.',
+    },
+    {
+        key: '3',
+        description: 'Invest in systematically monitoring IDPs’ access to education, the quality of education they receive and associated costs by safely identifying IDPs in national education data.',
+    },
+    {
+        key: '4',
+        description: 'Strengthen data quality, sharing and interoperability by ensuring data on IDPs’ education is standardised, safely and ethically collected and shared, and regularly updated.',
     },
 ];
 
@@ -295,7 +331,7 @@ function AsiaReport(props: Props) {
                     />
                     <Header
                         headingClassName={styles.heading}
-                        heading="Estimating and costing IDPs’ access to education"
+                        heading="Informing better access to education for IDPs"
                         headingDescription={undefined}
                         headingDescriptionClassName={styles.headingDescription}
                         headingSize="large"
@@ -330,10 +366,6 @@ function AsiaReport(props: Props) {
             >
                 <div className={_cs(styles.keyMessagesContent, styles.sectionContent)}>
                     <Header
-                        heading="At a glance"
-                        headingSize="large"
-                    />
-                    <Header
                         heading="Key Messages"
                         headingSize="large"
                     />
@@ -355,14 +387,14 @@ function AsiaReport(props: Props) {
             </section>
             <div className={styles.dividerImage}>
                 <img
-                    src={heroImage}
+                    src={coverImage2}
                     className={styles.background}
                     alt=""
                 />
                 <div className={styles.imageCaption}>
-                    {dummyCaption}
+                    {youngGirlCaption}
                     <div>
-                        {dummySubCaption}
+                        {youngGirlSubCaption}
                     </div>
                 </div>
             </div>
@@ -380,12 +412,19 @@ function AsiaReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {internallyDisplacedParagraph1}
                             </p>
-                            <p className={styles.descriptionParagraph}>
+                            <p className={styles.descriptionQuote}>
                                 {internallyDisplacedParagraph2}
                             </p>
-                            <p className={styles.descriptionParagraph}>
+                            <p className={styles.descriptionQuote}>
                                 {internallyDisplacedParagraph3}
                             </p>
+                        </div>
+                        <div className={styles.rightContainer}>
+                            <img
+                                src={dataGaps}
+                                className={styles.background}
+                                alt=""
+                            />
                         </div>
                     </div>
                 </div>
@@ -399,18 +438,78 @@ function AsiaReport(props: Props) {
                         heading="Data on internally displaced children"
                         headingSize="large"
                     />
-                    <div className={styles.idTrendTopContainer}>
-                        <div className={styles.descriptionContainer}>
-                            <p className={styles.descriptionParagraph}>
-                                {dataInternallyDisplacedDescription1}
-                            </p>
-                            <p className={styles.descriptionParagraph}>
-                                {dataInternallyDisplacedDescription2}
-                            </p>
+                    <div className={styles.descriptionContainer}>
+                        <p className={styles.descriptionParagraph}>
+                            {dataInternallyDisplacedDescription1}
+                        </p>
+                        <p className={styles.descriptionParagraph}>
+                            {dataInternallyDisplacedDescription2}
+                        </p>
+                    </div>
+                    <div className={styles.barChartContent}>
+                        <div className={styles.barChart}>
+                            <div className={styles.barChartHeading}>
+                                <Header
+                                    heading="14 million"
+                                    headingDescription="Estimated number of school-aged IDPs across all 13 countries as of the end of 2021"
+                                    headingSize="medium"
+                                />
+                            </div>
+                            <img
+                                src={barChart3}
+                                className={styles.background}
+                                alt=""
+                            />
+                        </div>
+                        <div className={styles.barChart}>
+                            <div className={styles.barChartHeading}>
+                                <Header
+                                    heading="13m"
+                                    headingDescription="by conflict and violence"
+                                    headingSize="medium"
+                                />
+                            </div>
+                            <img
+                                src={barChart1}
+                                className={styles.background}
+                                alt=""
+                            />
+                        </div>
+                        <div className={styles.barChart}>
+                            <div className={styles.barChartHeading}>
+                                <Header
+                                    heading="1m"
+                                    headingDescription="by disaster"
+                                    headingSize="medium"
+                                />
+                            </div>
+                            <img
+                                src={barChart2}
+                                className={styles.background}
+                                alt=""
+                            />
+                            <Button
+                                name="download"
+                            >
+                                Download Dataset
+                            </Button>
                         </div>
                     </div>
                 </div>
             </section>
+            <div className={styles.dividerImage}>
+                <img
+                    src={coverImage3}
+                    className={styles.background}
+                    alt=""
+                />
+                <div className={styles.imageCaption}>
+                    {childrenCaption}
+                    <div>
+                        {childrenSubCaption}
+                    </div>
+                </div>
+            </div>
             <section
                 className={_cs(styles.education, styles.section)}
                 id="education-cost"
@@ -421,6 +520,11 @@ function AsiaReport(props: Props) {
                         headingSize="large"
                     />
                     <div className={styles.topEducationContainer}>
+                        <img
+                            src={educationImage}
+                            className={styles.background}
+                            alt=""
+                        />
                         <div className={styles.description}>
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph1}
@@ -432,19 +536,27 @@ function AsiaReport(props: Props) {
                                 {estimatingEducationParagraph3}
                             </p>
                         </div>
+                        <img
+                            src={tableData}
+                            className={styles.background}
+                            alt=""
+                        />
+                        <div className={styles.estimatedCaption}>
+                            {estimatedCaption}
+                        </div>
                     </div>
                 </div>
             </section>
             <div className={styles.dividerImage}>
                 <img
-                    src={heroImage}
+                    src={coverImage4}
                     className={styles.background}
                     alt=""
                 />
                 <div className={styles.imageCaption}>
-                    {dummyCaption}
+                    {studingCaption}
                     <div>
-                        {dummySubCaption}
+                        {studingSubCaption}
                     </div>
                 </div>
             </div>
@@ -470,6 +582,14 @@ function AsiaReport(props: Props) {
                             </p>
                         </div>
                         <div className={styles.belowImgContainer}>
+                            <img
+                                src={ageGender}
+                                className={styles.background}
+                                alt=""
+                            />
+                            <p className={styles.descriptionCaption}>
+                                {descriptionCaption}
+                            </p>
                             <p className={styles.descriptionImageParagraph}>
                                 {qualityEducationQuote1}
                             </p>
@@ -485,97 +605,36 @@ function AsiaReport(props: Props) {
                 id="social-impacts"
             >
                 <div className={_cs(styles.sectionContent)}>
-                    <Carousel
-                        className={styles.bottomContainer}
-                        numberOfVisibleItems={visibleItems}
-                    >
-                        <CarouselButton
-                            className={styles.carouselButton}
-                            action="prev"
-                        />
+                    <div className={styles.bottomContainer}>
                         <div className={styles.itemList}>
-                            <CarouselItem
-                                className={styles.spotlightItem}
-                                order={1}
-                            >
-                                <a
-                                    href={`${reportLink}#page=30`}
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    <img
-                                        className={styles.spotlightImage}
-                                        src={heroImage}
-                                        alt=""
-                                    />
-                                </a>
-                            </CarouselItem>
-                            <CarouselItem
-                                className={styles.spotlightItem}
-                                order={2}
-                            >
-                                <a
-                                    href={`${reportLink}#page=32`}
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    <img
-                                        className={styles.spotlightImage}
-                                        src={heroImage}
-                                        alt=""
-                                    />
-                                </a>
-                            </CarouselItem>
-                            <CarouselItem
-                                className={styles.spotlightItem}
-                                order={3}
-                            >
-                                <a
-                                    href={`${reportLink}#page=33`}
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    <img
-                                        className={styles.spotlightImage}
-                                        src={heroImage}
-                                        alt=""
-                                    />
-                                </a>
-                            </CarouselItem>
-                            <CarouselItem
-                                className={styles.spotlightItem}
-                                order={4}
-                            >
-                                <a
-                                    href={`${reportLink}#page=35`}
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    <img
-                                        className={styles.spotlightImage}
-                                        src={heroImage}
-                                        alt=""
-                                    />
-                                </a>
-                            </CarouselItem>
+                            <div className={styles.spotlightItem}>
+                                <img
+                                    className={styles.spotlightImage}
+                                    src={spotLight1}
+                                    alt=""
+                                />
+                            </div>
+                            <div className={styles.spotlightItem}>
+                                <img
+                                    className={styles.spotlightImage}
+                                    src={spotLight2}
+                                    alt=""
+                                />
+                            </div>
                         </div>
-                        <CarouselButton
-                            className={styles.carouselButton}
-                            action="next"
-                        />
-                    </Carousel>
+                    </div>
                 </div>
             </section>
             <div className={styles.dividerImage}>
                 <img
-                    src={heroImage}
+                    src={bannerImg1}
                     className={styles.background}
                     alt=""
                 />
                 <div className={styles.imageCaption}>
-                    {dummyCaption}
+                    {primarySchoolCaption}
                     <div>
-                        {dummySubCaption}
+                        {primarySchoolSubCaption}
                     </div>
                 </div>
             </div>
@@ -593,20 +652,9 @@ function AsiaReport(props: Props) {
                             {wayForwardParagraph1}
                         </p>
                         <p className={styles.descriptionParagraph}>
-                            <ul>
-                                <li>
-                                    {wayForwardListItem1}
-                                </li>
-                                <li>
-                                    {wayForwardListItem2}
-                                </li>
-                                <li>
-                                    {wayForwardListItem3}
-                                </li>
-                                <li>
-                                    {wayForwardListItem4}
-                                </li>
-                            </ul>
+                            <WayForwardContent
+                                data={wayForward}
+                            />
                         </p>
                     </div>
                 </div>
@@ -621,20 +669,24 @@ function AsiaReport(props: Props) {
                         headingSize="large"
                     />
                     <div className={styles.idConclusionTopContainer}>
-                        <div className={styles.descriptionContainer}>
-                            <p className={styles.descriptionParagraph}>
-                                {conclusionDescription}
-                            </p>
-                        </div>
+                        <p className={styles.descriptionParagraph}>
+                            {conclusionDescription}
+                        </p>
                     </div>
                 </div>
             </section>
             <div className={styles.dividerImage}>
                 <img
-                    src={heroImage}
+                    src={coverImage5}
                     className={styles.background}
                     alt=""
                 />
+                <div className={styles.imageCaption}>
+                    {oldWallCaption}
+                    <div>
+                        {oldWallSubCaption}
+                    </div>
+                </div>
             </div>
             <section
                 className={_cs(styles.download, styles.section)}

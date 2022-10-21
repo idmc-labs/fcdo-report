@@ -116,7 +116,7 @@
     .hero {
         position: relative;
         background-color: var(--tui-color-brand-light);
-        background-image: url('../../resources/img/hero.jpg');
+        background-image: url('../../resources/img/cover-img.jpg');
         background-position: right top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -146,7 +146,7 @@
                 }
                 .description-paragraph {
                     max-width: 40rem;
-                    font-size: var(--tui-font-size-medium);
+                    font-size: var(--tui-font-size-small);
                 }
             }
 
@@ -173,7 +173,7 @@
         transform-style: preserve-3d;
         background-color: transparent;
         width: 100%;
-        height: 320px;
+        height: 520px;
 
         .background {
             position: absolute;
@@ -272,8 +272,12 @@
                     font-size: var(--tui-font-size-medium);
                 }
             }
+            .estimated-caption {
+                font-style: italic;
+            }
         }
     }
+
     .cost-of-disaster {
         .top-container {
             display: flex;
@@ -283,17 +287,20 @@
 
             .description {
                 .description-paragraph {
-                    max-width: 32rem;
+                    max-width: 35rem;
                     font-size: var(--tui-font-size-medium);
                 }
+                .description-quote {
+                    max-width: 35rem;
+                    font-size: var(--tui-font-size-medium);
+                    font-weight: var(--tui-font-weight-bold);
+                }
             }
-
             .right-container {
-                display: flex;
-                flex-direction: column;
-                flex-grow: 1;
-                gap: var(--tui-spacing-extra-small);
-            }
+                .background {
+                    max-width: 23rem;
+                }
+            } 
         }
 
         .bottom-container {
@@ -327,6 +334,10 @@
                 flex-grow: 1;
                 gap: var(--tui-spacing-large);
 
+                @media (max-width: 880px) {
+                    flex-direction: column;
+                }
+
                 .spotlight-item {
                     position: relative;
                     flex-grow: 1;
@@ -342,15 +353,14 @@
                     &:after {
                         display: flex;
                         position: absolute;
-                        top: var(--tui-spacing-extra-small);
+                        bottom: var(--tui-spacing-extra-small);
                         left: var(--tui-spacing-extra-small);
                         align-items: center;
-                        background-color: #ffffff;
                         padding: 0 0.4rem;
-                        color: var(--color-disaster);
-                        font-size: var(--tui-font-size-extra-small);
+                        color: var(--color-foreground);
+                        font-size: var(--tui-font-size-small);
                         font-weight: var(--tui-font-weight-bold);
-                        content: 'SPOTLIGHT';
+                        content: 'SPOTLIGHT: Gender disparities in access to education in Somalia and Ethiopia';
                     }
 
                     .caption {
@@ -369,6 +379,23 @@
                     }
                 }
             }
+        }
+    }
+
+    .bar-chart-content {
+        display: flex;
+        gap: var(--tui-spacing-mega-large);
+
+        .bar-chart {
+            flex-direction: column;
+
+            .bar-chart-heading {
+                min-width: 60%;
+                text-align: center;
+            }
+        }
+        @media (max-width: 880px) {
+            flex-direction: column;
         }
     }
 
@@ -525,6 +552,13 @@
                 }
 
                 .below-img-container {
+                    .background {
+                        width: 100%;
+                    }
+                    .description-caption {
+                        font-size: var(--tui-font-size-extra-small);
+                        font-style: italic;
+                    }
                     .descriptionImageParagraph {
                         font-size: var(--tui-font-size-extra-large);
                         font-weight: var(--tui-font-weight-bold);
@@ -557,19 +591,11 @@
                     flex-direction: column;
                     padding: var(--tui-spacing-small) 0;
                     gap: var(--tui-spacing-small);
-
-                    .description-paragraph {
-                        margin: 0;
-                        max-width: 36rem;
-                    }
                 }
 
                 @media (max-width: 880px) {
                     flex-wrap: wrap;
-
-                    .description-paragraph {
-                        max-width: 100%;
-                    }
+                    max-width: 100%;
                 }
             }
         }
