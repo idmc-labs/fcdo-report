@@ -10,7 +10,7 @@ import '@togglecorp/toggle-ui/build/index.css';
 
 import { setMapboxToken } from '@togglecorp/re-map';
 
-import AsiaReport from '#views/AsiaReport';
+import FcdoReport from '#views/FcdoReport';
 
 import PreloadMessage from '#base/components/PreloadMessage';
 import sentryConfig from '#base/configs/sentry';
@@ -55,7 +55,7 @@ function Base() {
                 )}
             >
                 <ApolloProvider client={apolloClient}>
-                    <AsiaReport className={styles.view} />
+                    <FcdoReport className={styles.view} />
                 </ApolloProvider>
             </ErrorBoundary>
         </div>

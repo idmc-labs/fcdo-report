@@ -18,6 +18,7 @@ import Button from '#components/Button';
 import Header from '#components/Header';
 import TextOutput from '#components/TextOutput';
 import ButtonLikeLink from '#components/ButtonLikeLink';
+import Quote from '#components/Quote';
 import useBooleanState from '#hooks/useBooleanState';
 
 import spotLight1 from '#resources/img/spot-light1.jpg';
@@ -42,13 +43,13 @@ import {
     heroParagraph1,
     heroParagraph2,
     internallyDisplacedParagraph1,
-    internallyDisplacedParagraph2,
-    internallyDisplacedParagraph3,
+    internallyDisplacedQuote,
+    internallyDisplacedAuthor,
     estimatingEducationParagraph1,
     estimatingEducationParagraph2,
     estimatingEducationParagraph3,
-    qualityEducationQuote1,
-    qualityEducationQuote2,
+    qualityEducationQuote,
+    qualityEducationAuthor,
     qualityEducationParagraph1,
     qualityEducationParagraph2,
     qualityEducationParagraph3,
@@ -102,13 +103,13 @@ const sectionOptions = [
         startPage: '9',
     },
     {
-        label: 'Part 1: Internal Displacement Trends in Asia and the Pacific (2010−2021)',
-        key: 'Part 1: Internal Displacement Trends in Asia and the Pacific (2010−2021)',
+        label: 'Part 1: Internal Displacement Trends in fcdo and the Pacific (2010−2021)',
+        key: 'Part 1: Internal Displacement Trends in fcdo and the Pacific (2010−2021)',
         startPage: '10',
     },
     {
-        label: 'Part 2: Measuring the Social and Economic Impacts of Disaster Displacement in Asia and the Pacific',
-        key: 'Part 2: Measuring the Social and Economic Impacts of Disaster Displacement in Asia and the Pacific',
+        label: 'Part 2: Measuring the Social and Economic Impacts of Disaster Displacement in fcdo and the Pacific',
+        key: 'Part 2: Measuring the Social and Economic Impacts of Disaster Displacement in fcdo and the Pacific',
         startPage: '28',
     },
     {
@@ -205,7 +206,7 @@ interface Props {
     className?: string;
 }
 
-function AsiaReport(props: Props) {
+function FcdoReport(props: Props) {
     const {
         className,
     } = props;
@@ -230,35 +231,11 @@ function AsiaReport(props: Props) {
             elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }, []);
-    const [visibleItems, setVisibleItems] = useState(2);
-    const debounceTimeoutRef = React.useRef<number>();
-    React.useEffect(() => {
-        const onNumberOfVisibleItemsChange = () => {
-            window.clearTimeout(debounceTimeoutRef.current);
-            debounceTimeoutRef.current = window.setTimeout(() => {
-                const width = document.documentElement.clientWidth;
-                if (width < 720) {
-                    setVisibleItems(1);
-                    // } else if (width < 1200) {
-                    //     setVisibleItems(2);
-                } else {
-                    setVisibleItems(2);
-                }
-            }, 200);
-        };
-
-        window.addEventListener('resize', onNumberOfVisibleItemsChange);
-        onNumberOfVisibleItemsChange();
-
-        return () => {
-            window.removeEventListener('resize', onNumberOfVisibleItemsChange);
-        };
-    }, []);
 
     return (
         <div
-            id="asia-report"
-            className={_cs(styles.asiaReport, className)}
+            id="fcdo-report"
+            className={_cs(styles.fcdoReport, className)}
         >
             <nav className={styles.nav}>
                 <div className={styles.leftContainer}>
@@ -412,12 +389,10 @@ function AsiaReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {internallyDisplacedParagraph1}
                             </p>
-                            <p className={styles.descriptionQuote}>
-                                {internallyDisplacedParagraph2}
-                            </p>
-                            <p className={styles.descriptionQuote}>
-                                {internallyDisplacedParagraph3}
-                            </p>
+                            <Quote
+                                quote={internallyDisplacedQuote}
+                                author={internallyDisplacedAuthor}
+                            />
                         </div>
                         <div className={styles.rightContainer}>
                             <img
@@ -590,12 +565,10 @@ function AsiaReport(props: Props) {
                             <p className={styles.descriptionCaption}>
                                 {descriptionCaption}
                             </p>
-                            <p className={styles.descriptionImageParagraph}>
-                                {qualityEducationQuote1}
-                            </p>
-                            <p className={styles.descriptionImageParagraph}>
-                                {qualityEducationQuote2}
-                            </p>
+                            <Quote
+                                quote={qualityEducationQuote}
+                                author={qualityEducationAuthor}
+                            />
                         </div>
                     </div>
                 </div>
@@ -651,11 +624,9 @@ function AsiaReport(props: Props) {
                         <p className={styles.descriptionParagraph}>
                             {wayForwardParagraph1}
                         </p>
-                        <p className={styles.descriptionParagraph}>
-                            <WayForwardContent
-                                data={wayForward}
-                            />
-                        </p>
+                        <WayForwardContent
+                            data={wayForward}
+                        />
                     </div>
                 </div>
             </section>
@@ -860,4 +831,4 @@ function AsiaReport(props: Props) {
     );
 }
 
-export default AsiaReport;
+export default FcdoReport;
