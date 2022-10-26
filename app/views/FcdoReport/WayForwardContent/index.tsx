@@ -53,12 +53,12 @@ function Item(props: ItemProps) {
     ]);
 
     useEffect(() => {
-        const asiaReport = document.getElementById('asia-report');
+        const fcdoReport = document.getElementById('fcdo-report');
 
-        asiaReport?.addEventListener('scroll', handleScroll, false);
+        fcdoReport?.addEventListener('scroll', handleScroll, false);
 
         return () => {
-            asiaReport?.removeEventListener('scroll', handleScroll, false);
+            fcdoReport?.removeEventListener('scroll', handleScroll, false);
         };
     }, [handleScroll]);
 

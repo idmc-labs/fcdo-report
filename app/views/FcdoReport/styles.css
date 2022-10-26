@@ -1,4 +1,4 @@
-.asia-report {
+.fcdo-report {
     display: flex;
     position: relative;
     align-items: center;
@@ -116,7 +116,7 @@
     .hero {
         position: relative;
         background-color: var(--tui-color-brand-light);
-        background-image: url('../../resources/img/hero.jpg');
+        background-image: url('../../resources/img/cover-img.jpg');
         background-position: right top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -140,10 +140,6 @@
             }
 
             .description {
-                .description-heading {
-                    max-width: 40rem;
-                    font-size: var(--tui-font-size-large);
-                }
                 .description-paragraph {
                     max-width: 40rem;
                     font-size: var(--tui-font-size-medium);
@@ -198,39 +194,12 @@
             width: 100%;
             max-width: 30rem;
             text-align: right;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
             color: #ffffff;
             font-size: var(--tui-font-size-small);
 
             >* {
                 text-align: right;
-            }
-        }
-
-        &.center {
-            justify-content: center;
-
-            .image-caption {
-                display: flex;
-                align-items: center;
-                align-self: center;
-                padding: var(--tui-spacing-small) var(--tui-spacing-ultra-large);
-                max-width: 70rem;
-                text-align: center;
-                text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
-                font-size: var(--tui-font-size-large);
-                gap: var(--tui-spacing-large);
-            }
-
-            @media (max-width: 720px) {
-                .image-caption {
-                    font-size: var(--tui-font-size-medium);
-                }
-            }
-
-            @media (max-width: 420px) {
-                .image-caption {
-                    font-size: var(--tui-font-size-small);
-                }
             }
         }
     }
@@ -253,27 +222,31 @@
         }
     }
 
-    .education {        
+    .education {
         .top-education-container {
             display: flex;
             flex-direction:column;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: var(--tui-spacing-large);
-            
+
             .background {
                 width: 100%;
                 gap: var(--tui-spacing-large);
                 object-fit: cover;
-            } 
-    
+            }
+
             .description {
                 .description-paragraph {
                     font-size: var(--tui-font-size-medium);
                 }
             }
+            .estimated-caption {
+                font-style: italic;
+            }
         }
     }
+
     .cost-of-disaster {
         .top-container {
             display: flex;
@@ -283,17 +256,15 @@
 
             .description {
                 .description-paragraph {
-                    max-width: 32rem;
+                    max-width: 35rem;
                     font-size: var(--tui-font-size-medium);
                 }
             }
-
             .right-container {
-                display: flex;
-                flex-direction: column;
-                flex-grow: 1;
-                gap: var(--tui-spacing-extra-small);
-            }
+                .background {
+                    max-width: 23rem;
+                }
+            } 
         }
 
         .bottom-container {
@@ -303,29 +274,14 @@
             gap: var(--tui-spacing-large);
             overflow: none;
 
-            .carousel-button {
-                display: block;
-                flex-shrink: 0;
-                z-index: 1;
-                border-radius: 50%;
-                background-color: rgba(0, 0, 0, 0.5);
-                padding: 0;
-                width: 2rem;
-                height: 2rem;
-                color: #ffffff;
-                font-size: var(--tui-font-size-small);
-            }
-
-            &:hover {
-                .carousel-button {
-                    display: block;
-                }
-            }
-
             .item-list {
                 display: flex;
                 flex-grow: 1;
                 gap: var(--tui-spacing-large);
+
+                @media (max-width: 880px) {
+                    flex-direction: column;
+                }
 
                 .spotlight-item {
                     position: relative;
@@ -342,33 +298,34 @@
                     &:after {
                         display: flex;
                         position: absolute;
-                        top: var(--tui-spacing-extra-small);
+                        bottom: var(--tui-spacing-extra-small);
                         left: var(--tui-spacing-extra-small);
                         align-items: center;
-                        background-color: #ffffff;
                         padding: 0 0.4rem;
-                        color: var(--color-disaster);
-                        font-size: var(--tui-font-size-extra-small);
+                        color: var(--color-foreground);
+                        font-size: var(--tui-font-size-small);
                         font-weight: var(--tui-font-weight-bold);
-                        content: 'SPOTLIGHT';
-                    }
-
-                    .caption {
-                        position: absolute;
-                        bottom: 0;
-                        padding: var(--tui-spacing-small);
-                        color: #ffffff;
-
-                        .heading {
-                            font-weight: var(--tui-font-weight-bold);
-                        }
-
-                        .sub-heading {
-                            font-size: var(--tui-font-size-large);
-                        }
+                        content: 'SPOTLIGHT: Gender disparities in access to education in Somalia and Ethiopia';
                     }
                 }
             }
+        }
+    }
+
+    .bar-chart-content {
+        display: flex;
+        gap: var(--tui-spacing-mega-large);
+
+        .bar-chart {
+            flex-direction: column;
+
+            .bar-chart-heading {
+                min-width: 60%;
+                text-align: center;
+            }
+        }
+        @media (max-width: 880px) {
+            flex-direction: column;
         }
     }
 
@@ -383,12 +340,6 @@
                 .description-paragraph {
                     max-width: 60rem;
                     font-size: var(--tui-font-size-medium);
-                }
-
-                .list-container {
-                    display: flex;
-                    flex-direction: column;
-                    gap: var(--tui-spacing-large);
                 }
             }
         }
@@ -476,28 +427,23 @@
             flex-direction: column;
             gap: var(--tui-spacing-large);
 
-            .id-trend-top-container {
+            .description-container {
                 display: flex;
-                gap: var(--tui-spacing-large);
+                flex-direction: column;
+                padding: var(--tui-spacing-small) 0;
+                gap: var(--tui-spacing-small);
 
-                .description-container {
-                    display: flex;
-                    flex-direction: column;
-                    padding: var(--tui-spacing-small) 0;
-                    gap: var(--tui-spacing-small);
-
-                    .description-paragraph {
-                        margin: 0;
-                        max-width: 36rem;
-                    }
+                .description-paragraph {
+                    margin: 0;
+                    max-width: 36rem;
                 }
+            }
 
-                @media (max-width: 880px) {
-                    flex-wrap: wrap;
+            @media (max-width: 880px) {
+                flex-wrap: wrap;
 
-                    .description-paragraph {
-                        max-width: 100%;
-                    }
+                .description-paragraph {
+                    max-width: 100%;
                 }
             }
         }
@@ -525,9 +471,12 @@
                 }
 
                 .below-img-container {
-                    .descriptionImageParagraph {
-                        font-size: var(--tui-font-size-extra-large);
-                        font-weight: var(--tui-font-weight-bold);
+                    .background {
+                        width: 100%;
+                    }
+                    .description-caption {
+                        font-size: var(--tui-font-size-extra-small);
+                        font-style: italic;
                     }
                 }
 
@@ -557,19 +506,11 @@
                     flex-direction: column;
                     padding: var(--tui-spacing-small) 0;
                     gap: var(--tui-spacing-small);
-
-                    .description-paragraph {
-                        margin: 0;
-                        max-width: 36rem;
-                    }
                 }
 
                 @media (max-width: 880px) {
                     flex-wrap: wrap;
-
-                    .description-paragraph {
-                        max-width: 100%;
-                    }
+                    max-width: 100%;
                 }
             }
         }
@@ -578,7 +519,7 @@
     .footer {
         position: relative;
         background-color: var(--tui-color-brand-light);
-        background-image: url('../../resources/img/hero.jpg');
+        background-image: url('../../resources/img/cover-img.jpg');
         background-position: right top;
         background-repeat: no-repeat;
         background-size: cover;

@@ -1,8 +1,8 @@
 {
-    "name": "idmc-website-components",
-    "longName": "Disaster Displacement in Asia and the Pacific",
+    "name": "fcdo-report",
+    "longName": "FCDO Education Cost Children Landing Page",
     "version": "1.0.0",
-    "description": "Disaster Displacement in Asia and the Pacific",
+    "description": "FCDO Education Cost Children Landing Page",
     "scripts": {
         "deploy:dev": "test -d build && cp -f build/index.html build/200.html && surge --domain idmc-website-components.surge.sh build/",
         "test": "jest",

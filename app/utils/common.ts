@@ -11,8 +11,6 @@ import {
     getAutoPrecision,
 } from '#components/Numeral';
 
-const standaloneMode = (window as { standaloneMode?: boolean }).standaloneMode ?? false;
-
 export function rankedSearchOnList<T>(
     list: T[],
     searchString: string | undefined,
@@ -75,13 +73,6 @@ export function formatNumber(value: number) {
         valueSuffix: normalizeSuffix = '',
     } = output;
     return `${number}${normalizeSuffix}`;
-}
-
-export function getAsiaReportLink() {
-    // NOTE: we need to also add countryName on standaloneMode url
-    return standaloneMode
-        ? '/?page=asia-report'
-        : '/asia-report';
 }
 
 export const monthList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
