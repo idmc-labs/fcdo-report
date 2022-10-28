@@ -26,9 +26,6 @@ import spotLight2 from '#resources/img/spot-light2.jpg';
 import educationImage from '#resources/img/education-image.png';
 import tableData from '#resources/img/table-data.jpg';
 import coverImage3 from '#resources/img/cover-img3.jpg';
-import barChart1 from '#resources/img/bar.png';
-import barChart2 from '#resources/img/bar2.png';
-import barChart3 from '#resources/img/bar3.png';
 import ageGender from '#resources/img/age-gender.png';
 import coverImage2 from '#resources/img/cover-img2.jpg';
 import coverImage4 from '#resources/img/cover-img4.jpg';
@@ -38,6 +35,9 @@ import dataGaps from '#resources/img/data-gaps.png';
 import idmcLogo from '#resources/img/idmc-white.svg';
 import bookCover from '#resources/img/book-cover.png';
 import bannerImg1 from '#resources/img/banner-img1.jpg';
+import ByAgeBar from './ByAgeBar';
+import ByConflict from './ByConflict';
+import ByDisaster from './ByDisaster';
 
 import {
     heroParagraph1,
@@ -430,10 +430,8 @@ function FcdoReport(props: Props) {
                                     headingSize="medium"
                                 />
                             </div>
-                            <img
-                                src={barChart3}
-                                className={styles.background}
-                                alt=""
+                            <ByAgeBar
+                                className={styles.svg}
                             />
                         </div>
                         <div className={styles.barChart}>
@@ -444,10 +442,8 @@ function FcdoReport(props: Props) {
                                     headingSize="medium"
                                 />
                             </div>
-                            <img
-                                src={barChart1}
-                                className={styles.background}
-                                alt=""
+                            <ByDisaster
+                                className={styles.svg}
                             />
                         </div>
                         <div className={styles.barChart}>
@@ -458,10 +454,8 @@ function FcdoReport(props: Props) {
                                     headingSize="medium"
                                 />
                             </div>
-                            <img
-                                src={barChart2}
-                                className={styles.background}
-                                alt=""
+                            <ByConflict
+                                className={styles.svg}
                             />
                             <Button
                                 name="download"
