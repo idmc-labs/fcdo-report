@@ -39,12 +39,12 @@ export const qualityEducationAuthor = 'Local youth representative, Beledweyne, S
 
 export const wayForwardParagraph1 = 'Better data on internally displaced children would lay the foundation for transformative policies and programmes to ensure their access to quality education. The following action points should be considered to strengthen evidence based policymaking';
 
-export const contactParagraph = 'IDMC’s Global Report on Internal Displacement (GRID) is the world’s leading source of data and analysis on internal displacement Since our establishment in 1998 as part of the Norwegian Refugee Council (NRC), we have offered a rigorous, independent and trusted service to the International community. Our work informs policy and operational decisions that improve the lives of the millions people living in intenal displacement, or at risk of becoming displaced in the future.';
+export const contactParagraph = 'Every day, people flee conflict and disasters and become displaced inside their own countries. IDMC provides data and analysis and supports partners to identify and implement solutions to internal displacement.';
 export const copyrightParagraph = 'Copyright © Internal Displacement Monitoring Centre (IDMC). Unless otherwise indicated, all materials on this page may be shared freely providing an acknowledgement of IDMC as the source is included. Materials may not be adapted without prior permission from IDMC.';
 
 export const conclusionDescription = 'Promising efforts are underway to address these data gaps. For example, the International Data Alliance for Children on the Move (IDAC) is an important initiative intended to foster streamlined approaches to improving statistics and data on displaced children. The Inter-agency Network for Education in Emergencies (INEE) is setting up the Data Reference Group on Education in Emergencies, which will bring together dozens of organisations that work on related topics to share their data, methodologies, approaches and experiences. Such examples reflect a growing awareness that strengthening data quality, sharing and interoperability is a priority in efforts to provide internally displaced children with quality education.';
 
-export const reportLink = 'https://www.internal-displacement.org/sites/default/files/publications/documents/220919_IDMC_Disaster-Displacement-in-Asia-and-the-Pacific.pdf';
+export const reportLink = 'https://www.internal-displacement.org/sites/default/files/publications/documents/221114_IDMC_Informing-Better-Access-to-education-for-IDPs.pdf';
 export const pressReleaseLink = 'https://www.internal-displacement.org/sites/default/files/220919_idmc_asiareport_pressrelease.pdf';
 
 export const videoCaption = 'Disaster Displacements in the Asia and Pacific Region (2010−2021)';

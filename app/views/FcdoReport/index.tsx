@@ -306,14 +306,6 @@ function FcdoReport(props: Props) {
                     )}
                 >
                     <Button
-                        name="at-a-glance"
-                        onClick={handleNavClick}
-                        className={styles.navItem}
-                        variant="transparent"
-                    >
-                        At a glance
-                    </Button>
-                    <Button
                         name="key-findings"
                         onClick={handleNavClick}
                         className={styles.navItem}
@@ -327,7 +319,7 @@ function FcdoReport(props: Props) {
                         className={styles.navItem}
                         variant="transparent"
                     >
-                        Explore the data
+                        In summary
                     </Button>
                     <Button
                         name="download-report"
@@ -335,7 +327,7 @@ function FcdoReport(props: Props) {
                         className={styles.navItem}
                         variant="transparent"
                     >
-                        Download report
+                        The Way Forward & Conclusion
                     </Button>
                 </div>
             </nav>
@@ -618,11 +610,13 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionCaption}>
                                 {descriptionCaption}
                             </p>
-                            <Quote
-                                quote={qualityEducationQuote}
-                                author={qualityEducationAuthor}
-                            />
                         </div>
+                    </div>
+                    <div className={styles.quotes}>
+                        <Quote
+                            quote={qualityEducationQuote}
+                            author={qualityEducationAuthor}
+                        />
                     </div>
                 </div>
             </section>
@@ -639,6 +633,12 @@ function FcdoReport(props: Props) {
                                     src={spotLight1}
                                     alt=""
                                 />
+                                <div className={styles.caption}>
+                                    <div className={styles.subHeading}>
+                                        Gender disparities in access to
+                                        education in Somalia and Ethiopia
+                                    </div>
+                                </div>
                             </div>
                             <div className={styles.spotlightItem}>
                                 <img
@@ -646,6 +646,12 @@ function FcdoReport(props: Props) {
                                     src={spotLight2}
                                     alt=""
                                 />
+                                <div className={styles.caption}>
+                                    <div className={styles.subHeading}>
+                                        Estimating the number of IDPs at
+                                        risk of missing out on education
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -692,7 +698,7 @@ function FcdoReport(props: Props) {
                         heading="Conclusion"
                         headingSize="large"
                     />
-                    <div className={styles.idConclusionTopContainer}>
+                    <div className={styles.description}>
                         <p className={styles.descriptionParagraph}>
                             {conclusionDescription}
                         </p>

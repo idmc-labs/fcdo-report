@@ -88,7 +88,6 @@
         z-index: 1;
         background-color: #ffffff;
         width: 100%;
-        min-height: 60vh;
         overflow-y: auto;
 
         .section-content {
@@ -298,14 +297,29 @@
                     &:after {
                         display: flex;
                         position: absolute;
-                        bottom: var(--tui-spacing-extra-small);
+                        top: var(--tui-spacing-extra-small);
                         left: var(--tui-spacing-extra-small);
                         align-items: center;
+                        background-color: #ffffff;
                         padding: 0 0.4rem;
-                        color: var(--color-foreground);
-                        font-size: var(--tui-font-size-small);
+                        color: var(--color-disaster);
+                        font-size: var(--tui-font-size-extra-small);
                         font-weight: var(--tui-font-weight-bold);
-                        content: 'SPOTLIGHT: Gender disparities in access to education in Somalia and Ethiopia';
+                        content: 'SPOTLIGHT';
+                    }
+                    .caption {
+                        position: absolute;
+                        bottom: 0;
+                        padding: var(--tui-spacing-small);
+                        color: #ffffff;
+
+                        .heading {
+                            font-weight: var(--tui-font-weight-bold);
+                        }
+
+                        .sub-heading {
+                            font-size: var(--tui-font-size-large);
+                        }
                     }
                 }
             }
@@ -516,24 +530,24 @@
                     }
                 }
             }
+            .quotes {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 
     .conclusion {
         .id-conclusion-content {
-            display: flex;
-            flex-direction: column;
-            gap: var(--tui-spacing-large);
-
-            .id-conclusion-top-container {
+            .description {
                 display: flex;
-                gap: var(--tui-spacing-large);
+                align-items: center;
+                flex-direction: column;
+                gap: var(--tui-spacing-medium);
 
-                .description-container {
-                    display: flex;
-                    flex-direction: column;
-                    padding: var(--tui-spacing-small) 0;
-                    gap: var(--tui-spacing-small);
+                .description-paragraph {
+                    max-width: 60rem;
+                    font-size: var(--tui-font-size-medium);
                 }
 
                 @media (max-width: 880px) {
@@ -548,7 +562,7 @@
         position: relative;
         background-color: var(--tui-color-brand-light);
         background-image: url('../../resources/img/cover-img.jpg');
-        background-position: right top;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: soft-light;
