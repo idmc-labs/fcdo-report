@@ -215,10 +215,18 @@
 
     .key-findings {
         width: 100%;
-        min-height: unset;
+        height: auto;
 
         .key-findings-content {
             gap: var(--tui-spacing-large);
+
+            .key-findings-container {
+                display: flex;
+
+                key-findings-img {
+                    object-fit: cover;
+                }
+            }
         }
     }
 

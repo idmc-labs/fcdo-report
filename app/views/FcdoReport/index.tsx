@@ -78,6 +78,7 @@ import {
     oldWallSubCaption,
 } from './data';
 import WayForwardContent from './WayForwardContent';
+import KeyFindingsContent from './KeyFindingsContent';
 
 import styles from './styles.css';
 
@@ -138,18 +139,22 @@ const keyFindings = [
     {
         key: '1',
         description: 'There were 14 millons IDPs aged five to 17 in the 13 countries studied at the end of 2021.* Thirteen million had been displaced by conflict and violence and million by disasters.',
+        image: spotLight1,
     },
     {
         key: '2',
         description: 'Afghanistan, the Democractic Republic of the Congo and Syria had the highest number of school-aged IDPs, with two million, 1.9 and 1.7 million respectively.',
+        image: spotLight2,
     },
     {
         key: '3',
         description: 'More than nice million internally displaced children could be at risk of missing out on education because they did not receive support through humanitarian response plans in 2021.',
+        image: spotLight1,
     },
     {
         key: '4',
         description: 'We estimate the average cost of providing one IDP with education support via humanitarian response plans for a year to be between $82 and $93.',
+        image: spotLight2,
     },
     {
         key: '5',
@@ -213,6 +218,7 @@ function FcdoReport(props: Props) {
 
     const [selectedSection, setSelectedSection] = useState<string | undefined>(undefined);
     const [isNavShown, , , , toggleNavVisibility] = useBooleanState(false);
+    const [selectedKeyFinding, setSelectedKeyFinding] = useState('1');
 
     const pageSuffix = useMemo(() => {
         const selectedSectionObj = sectionOptions.find(
@@ -357,9 +363,20 @@ function FcdoReport(props: Props) {
                         heading="Key Findings*"
                         headingSize="large"
                     />
-                    <WayForwardContent
-                        data={keyFindings}
-                    />
+                    <div className={styles.keyFindingsContainer}>
+                        <KeyFindingsContent
+                            onItemClick={setSelectedKeyFinding}
+                            data={keyFindings}
+                        />
+                        <img
+                            className={styles.keyFindingsImg}
+                            src={keyFindings?.find((item) => item.key === selectedKeyFinding)
+                                ?.image}
+                            alt=""
+                            width={530}
+                            height={750}
+                        />
+                    </div>
                 </div>
             </section>
             <div className={styles.dividerImage}>
