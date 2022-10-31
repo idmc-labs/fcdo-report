@@ -33,6 +33,9 @@ import ageGender from '#resources/img/age-gender.png';
 import coverImage2 from '#resources/img/cover-img2.jpg';
 import coverImage4 from '#resources/img/cover-img4.jpg';
 import coverImage5 from '#resources/img/cover-img5.jpg';
+import keyFinding1 from '#resources/img/key-finding1.png';
+import keyFinding2 from '#resources/img/key-finding2.png';
+import keyFinding3 from '#resources/img/key-finding3.png';
 
 import dataGaps from '#resources/img/data-gaps.png';
 import idmcLogo from '#resources/img/idmc-white.svg';
@@ -139,26 +142,27 @@ const keyFindings = [
     {
         key: '1',
         description: 'There were 14 millons IDPs aged five to 17 in the 13 countries studied at the end of 2021.* Thirteen million had been displaced by conflict and violence and million by disasters.',
-        image: spotLight1,
+        image: keyFinding1,
     },
     {
         key: '2',
         description: 'Afghanistan, the Democractic Republic of the Congo and Syria had the highest number of school-aged IDPs, with two million, 1.9 and 1.7 million respectively.',
-        image: spotLight2,
+        image: keyFinding2,
     },
     {
         key: '3',
         description: 'More than nice million internally displaced children could be at risk of missing out on education because they did not receive support through humanitarian response plans in 2021.',
-        image: spotLight1,
+        image: keyFinding3,
     },
     {
         key: '4',
         description: 'We estimate the average cost of providing one IDP with education support via humanitarian response plans for a year to be between $82 and $93.',
-        image: spotLight2,
+        image: keyFinding3,
     },
     {
         key: '5',
         description: 'The cost of providing a year’s education support for all school-aged IDPs in the 13 countries studied would be between $1.1 billion and $1.3 billion.',
+        image: keyFinding3,
     },
 ];
 
@@ -373,8 +377,8 @@ function FcdoReport(props: Props) {
                             src={keyFindings?.find((item) => item.key === selectedKeyFinding)
                                 ?.image}
                             alt=""
-                            width={530}
-                            height={750}
+                            width={600}
+                            height={790}
                         />
                     </div>
                 </div>
