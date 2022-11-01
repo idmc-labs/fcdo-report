@@ -97,54 +97,49 @@ const svgTitles = [
 
 const sectionOptions = [
     {
-        key: 'foreward',
-        label: 'Foreword',
+        label: 'Introduction',
+        key: 'Introduction',
+        startPage: '6',
+    },
+    {
+        label: 'Data on internally displaced children',
+        key: 'Data on Internally Displaced Children',
         startPage: '7',
     },
     {
-        label: 'Key Messages and Findings',
-        key: 'Key Messages and Findings',
+        label: 'Access to quality education',
+        key: 'Access to Quality Education',
         startPage: '8',
     },
     {
-        label: 'Introduction',
-        key: 'Introduction',
-        startPage: '9',
+        label: 'Education Costs',
+        key: 'Education Costs',
+        startPage: '16',
     },
     {
-        label: 'Definitions, Methodological Considerations, and Caveats',
-        key: 'Definitions, Methodological Considerations, and Caveats',
-        startPage: '9',
-    },
-    {
-        label: 'Part 1: Internal Displacement Trends in fcdo and the Pacific (2010−2021)',
-        key: 'Part 1: Internal Displacement Trends in fcdo and the Pacific (2010−2021)',
-        startPage: '10',
-    },
-    {
-        label: 'Part 2: Measuring the Social and Economic Impacts of Disaster Displacement in fcdo and the Pacific',
-        key: 'Part 2: Measuring the Social and Economic Impacts of Disaster Displacement in fcdo and the Pacific',
-        startPage: '28',
-    },
-    {
-        label: 'Part 3: Understanding Displacement in Disaster Prevention, Response, and Recovery',
-        key: 'Part 3: Understanding Displacement in Disaster Prevention, Response, and Recovery',
-        startPage: '37',
-    },
-    {
-        label: 'Part 4: Addressing Disaster Displacement: Progress in Policy and the Way Forward',
-        key: 'Part 4: Addressing Disaster Displacement: Progress in Policy and the Way Forward',
-        startPage: '45',
+        label: 'Ways forward to improve data',
+        key: 'Ways forward to improve data',
+        startPage: '18',
     },
     {
         label: 'Conclusion',
         key: 'Conclusion',
-        startPage: '52',
+        startPage: '19',
     },
     {
-        label: 'Appendix',
-        key: 'Appendix',
-        startPage: '53',
+        label: 'Annex 2',
+        key: 'Annex 2',
+        startPage: '20',
+    },
+    {
+        label: 'Annex 3',
+        key: 'Annex 3',
+        startPage: '21',
+    },
+    {
+        label: 'Annex 4',
+        key: 'Annex 4',
+        startPage: '22',
     },
 ];
 
