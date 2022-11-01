@@ -81,7 +81,6 @@ import {
     oldWallSubCaption,
 } from './data';
 import WayForwardContent from './WayForwardContent';
-import KeyFindingsContent from './KeyFindingsContent';
 
 import styles from './styles.css';
 
@@ -368,7 +367,8 @@ function FcdoReport(props: Props) {
                         headingSize="large"
                     />
                     <div className={styles.keyFindingsContainer}>
-                        <KeyFindingsContent
+                        <WayForwardContent
+                            selectedItem={selectedKeyFinding}
                             onItemClick={setSelectedKeyFinding}
                             data={keyFindings}
                         />

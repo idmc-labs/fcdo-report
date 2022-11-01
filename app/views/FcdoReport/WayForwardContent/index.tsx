@@ -1,8 +1,8 @@
 import React, { useCallback, useRef, useEffect } from 'react';
-import { _cs } from '@togglecorp/fujs';
+import { _cs, isDefined } from '@togglecorp/fujs';
 
 import useBooleanState from '#hooks/useBooleanState';
-import { List } from '@togglecorp/toggle-ui';
+import { List, RawButton } from '@togglecorp/toggle-ui';
 
 import {
 } from '../data';
@@ -12,6 +12,7 @@ import styles from './styles.css';
 interface Description {
     key: string;
     description: React.ReactNode;
+    image?: React.ReactNode;
 }
 
 const itemKeySelector = (item: Description) => item.key;
@@ -20,6 +21,8 @@ interface ItemProps {
     className?: string;
     order: string;
     description: React.ReactNode;
+    itemKey: string;
+    onItemClick?: (itemKey: string) => void;
 }
 
 function Item(props: ItemProps) {
@@ -27,9 +30,11 @@ function Item(props: ItemProps) {
         className,
         order,
         description,
+        itemKey,
+        onItemClick,
     } = props;
 
-    const itemRef = useRef<HTMLDivElement>(null);
+    const itemRef = useRef<HTMLButtonElement>(null);
     const [
         isAnimationShown,
         addAnimation,
@@ -62,41 +67,69 @@ function Item(props: ItemProps) {
         };
     }, [handleScroll]);
 
+    const handleItemClick = useCallback(() => {
+        if (onItemClick) {
+            onItemClick(itemKey);
+        }
+    }, [
+        onItemClick,
+        itemKey,
+    ]);
+
     return (
-        <div
-            ref={itemRef}
+        <RawButton
+            elementRef={itemRef}
+            name={itemKey}
+            onClick={handleItemClick}
             className={_cs(
                 styles.wayForwardListItem,
                 className,
                 isAnimationShown && styles.animate,
+                isDefined(onItemClick) && styles.clickable,
             )}
+            disabled={!isDefined(onItemClick)}
         >
             <div className={styles.order}>
                 {order}
             </div>
-            <div className={styles.description}>
+            <div
+                className={styles.description}
+            >
                 {description}
             </div>
-        </div>
+        </RawButton>
     );
 }
 
 interface Props {
     className?: string;
     data: Description[];
+    onItemClick?: (itemKey: string) => void;
+    selectedItem?: string;
 }
 
 function WayForwardContent(props: Props) {
     const {
         className,
         data,
+        selectedItem,
+        onItemClick,
     } = props;
 
-    const itemRendererParams = useCallback((_, item: Description) => ({
+    const itemRendererParams = useCallback((key: string, item: Description) => ({
         order: item.key,
+        itemKey: key,
         description: item.description,
-        className: styles.item,
-    }), []);
+        className: _cs(
+            styles.item,
+            selectedItem === key && styles.active,
+        ),
+        image: item.image,
+        onItemClick,
+    }), [
+        onItemClick,
+        selectedItem,
+    ]);
 
     return (
         <div className={_cs(className, styles.wayForwardContent)}>
