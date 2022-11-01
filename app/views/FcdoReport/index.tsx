@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState, useMemo } from 'react';
+import React, { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { _cs } from '@togglecorp/fujs';
 import {
     MdPictureAsPdf,
@@ -12,7 +12,10 @@ import {
     IoLogoLinkedin,
     IoLogoYoutube,
 } from 'react-icons/io5';
-import { SelectInput } from '@togglecorp/toggle-ui';
+import {
+    SelectInput,
+    PopupButton,
+} from '@togglecorp/toggle-ui';
 
 import Button from '#components/Button';
 import Header from '#components/Header';
@@ -231,6 +234,10 @@ function FcdoReport(props: Props) {
     const [isNavShown, , , , toggleNavVisibility] = useBooleanState(false);
     const [selectedKeyFinding, setSelectedKeyFinding] = useState('1');
 
+    const popupElementRef = useRef<{
+        setPopupVisibility: React.Dispatch<React.SetStateAction<boolean>>;
+    }>(null);
+
     const pageSuffix = useMemo(() => {
         const selectedSectionObj = sectionOptions.find(
             (section) => section.key === selectedSection,
@@ -270,7 +277,62 @@ function FcdoReport(props: Props) {
         if (elementToScrollTo) {
             elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+        setTimeout(() => {
+            popupElementRef.current?.setPopupVisibility(false);
+        }, 0);
     }, []);
+
+    const navMenuItems = useMemo(() => (
+        <>
+            <Button
+                name="invisible"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Why are internally displaced children invisible?
+            </Button>
+            <Button
+                name="data-on"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Data on internally displaced children
+            </Button>
+            <Button
+                name="estimating"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Estimating the education costs for IDPs
+            </Button>
+            <Button
+                name="access"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Access to quality education
+            </Button>
+        </>
+    ), [
+        isNavShown,
+        handleNavClick,
+    ]);
 
     return (
         <div
@@ -313,16 +375,21 @@ function FcdoReport(props: Props) {
                     >
                         Key messages and findings
                     </Button>
+                    {isNavShown ? (
+                        navMenuItems
+                    ) : (
+                        <PopupButton
+                            label="In Summary"
+                            name="explore-the-data"
+                            onClick={handleNavClick}
+                            componentRef={popupElementRef}
+                            className={_cs(styles.navItem, styles.dropdown)}
+                        >
+                            {navMenuItems}
+                        </PopupButton>
+                    )}
                     <Button
-                        name="explore-the-data"
-                        onClick={handleNavClick}
-                        className={styles.navItem}
-                        variant="transparent"
-                    >
-                        In summary
-                    </Button>
-                    <Button
-                        name="download-report"
+                        name="way-forward"
                         onClick={handleNavClick}
                         className={styles.navItem}
                         variant="transparent"
@@ -421,7 +488,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.costOfDisaster, styles.section)}
-                id="internally-displaced"
+                id="invisible"
             >
                 <div className={_cs(styles.sectionContent)}>
                     <Header
@@ -450,7 +517,7 @@ function FcdoReport(props: Props) {
             </section>
             <section
                 className={_cs(styles.idTrends, styles.section)}
-                id="data-internally-displaced"
+                id="data-on"
             >
                 <div className={_cs(styles.idTrendsContent, styles.sectionContent)}>
                     <Header
@@ -532,7 +599,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.education, styles.section)}
-                id="education-cost"
+                id="estimating"
             >
                 <div className={_cs(styles.sectionContent)}>
                     <Header
@@ -582,7 +649,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.idAccess, styles.section)}
-                id="quality-education"
+                id="access"
             >
                 <div className={_cs(styles.idAccessContent, styles.sectionContent)}>
                     <Header
