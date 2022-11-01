@@ -21,6 +21,7 @@ interface ItemProps {
     className?: string;
     order: string;
     description: React.ReactNode;
+    active?: boolean;
     itemKey: string;
     onItemClick?: (itemKey: string) => void;
 }
@@ -30,6 +31,7 @@ function Item(props: ItemProps) {
         className,
         order,
         description,
+        active = false,
         itemKey,
         onItemClick,
     } = props;
@@ -97,6 +99,11 @@ function Item(props: ItemProps) {
             >
                 {description}
             </div>
+            {onItemClick && (
+                <div>
+                    {active ? '>' : ' '}
+                </div>
+            )}
         </RawButton>
     );
 }
@@ -124,6 +131,7 @@ function WayForwardContent(props: Props) {
             styles.item,
             selectedItem === key && styles.active,
         ),
+        active: selectedItem === key,
         image: item.image,
         onItemClick,
     }), [

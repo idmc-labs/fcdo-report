@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo } from 'react';
+import React, { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { _cs } from '@togglecorp/fujs';
 import {
     MdPictureAsPdf,
@@ -12,7 +12,10 @@ import {
     IoLogoLinkedin,
     IoLogoYoutube,
 } from 'react-icons/io5';
-import { SelectInput } from '@togglecorp/toggle-ui';
+import {
+    SelectInput,
+    PopupButton,
+} from '@togglecorp/toggle-ui';
 
 import Button from '#components/Button';
 import Header from '#components/Header';
@@ -20,15 +23,16 @@ import TextOutput from '#components/TextOutput';
 import ButtonLikeLink from '#components/ButtonLikeLink';
 import Quote from '#components/Quote';
 import useBooleanState from '#hooks/useBooleanState';
+import Svg from '#components/Svg';
 
 import spotLight1 from '#resources/img/spot-light1.jpg';
 import spotLight2 from '#resources/img/spot-light2.jpg';
 import educationImage from '#resources/img/education-image.png';
 import tableData from '#resources/img/table-data.jpg';
 import coverImage3 from '#resources/img/cover-img3.jpg';
-import barChart1 from '#resources/img/bar.png';
-import barChart2 from '#resources/img/bar2.png';
-import barChart3 from '#resources/img/bar3.png';
+import barChart1 from '#resources/img/all.svg';
+import barChart2 from '#resources/img/conflict.svg';
+import barChart3 from '#resources/img/disaster.svg';
 import ageGender from '#resources/img/age-gender.png';
 import coverImage2 from '#resources/img/cover-img2.jpg';
 import coverImage4 from '#resources/img/cover-img4.jpg';
@@ -83,6 +87,13 @@ import {
 import WayForwardContent from './WayForwardContent';
 
 import styles from './styles.css';
+
+const svgTitles = [
+    {
+        key: 'afghanistan',
+        title: 'Test',
+    },
+];
 
 const sectionOptions = [
     {
@@ -223,6 +234,10 @@ function FcdoReport(props: Props) {
     const [isNavShown, , , , toggleNavVisibility] = useBooleanState(false);
     const [selectedKeyFinding, setSelectedKeyFinding] = useState('1');
 
+    const popupElementRef = useRef<{
+        setPopupVisibility: React.Dispatch<React.SetStateAction<boolean>>;
+    }>(null);
+
     const pageSuffix = useMemo(() => {
         const selectedSectionObj = sectionOptions.find(
             (section) => section.key === selectedSection,
@@ -233,13 +248,91 @@ function FcdoReport(props: Props) {
         return `#page=${selectedSectionObj.startPage}`;
     }, [selectedSection]);
 
+    useEffect(() => {
+        const timeout = setTimeout(
+            () => {
+                svgTitles.forEach((item) => {
+                    const itemGroup = document.getElementById(item.key);
+                    const itemTitle = document.createElementNS(
+                        'http://www.w3.org/2000/svg',
+                        'title',
+                    );
+                    itemTitle.textContent = item.title;
+                    if (itemGroup) {
+                        itemGroup.appendChild(itemTitle);
+                    }
+                });
+            },
+            200,
+        );
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, []);
+
     const handleNavClick = useCallback((itemHash) => {
         const elementToScrollTo = document.getElementById(itemHash);
 
         if (elementToScrollTo) {
             elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+        setTimeout(() => {
+            popupElementRef.current?.setPopupVisibility(false);
+        }, 0);
     }, []);
+
+    const navMenuItems = useMemo(() => (
+        <>
+            <Button
+                name="invisible"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Why are internally displaced children invisible?
+            </Button>
+            <Button
+                name="data-on"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Data on internally displaced children
+            </Button>
+            <Button
+                name="estimating"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Estimating the education costs for IDPs
+            </Button>
+            <Button
+                name="access"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                Access to quality education
+            </Button>
+        </>
+    ), [
+        isNavShown,
+        handleNavClick,
+    ]);
 
     return (
         <div
@@ -275,14 +368,6 @@ function FcdoReport(props: Props) {
                     )}
                 >
                     <Button
-                        name="at-a-glance"
-                        onClick={handleNavClick}
-                        className={styles.navItem}
-                        variant="transparent"
-                    >
-                        At a glance
-                    </Button>
-                    <Button
                         name="key-findings"
                         onClick={handleNavClick}
                         className={styles.navItem}
@@ -290,21 +375,26 @@ function FcdoReport(props: Props) {
                     >
                         Key messages and findings
                     </Button>
+                    {isNavShown ? (
+                        navMenuItems
+                    ) : (
+                        <PopupButton
+                            label="In Summary"
+                            name="explore-the-data"
+                            onClick={handleNavClick}
+                            componentRef={popupElementRef}
+                            className={_cs(styles.navItem, styles.dropdown)}
+                        >
+                            {navMenuItems}
+                        </PopupButton>
+                    )}
                     <Button
-                        name="explore-the-data"
+                        name="way-forward"
                         onClick={handleNavClick}
                         className={styles.navItem}
                         variant="transparent"
                     >
-                        Explore the data
-                    </Button>
-                    <Button
-                        name="download-report"
-                        onClick={handleNavClick}
-                        className={styles.navItem}
-                        variant="transparent"
-                    >
-                        Download report
+                        The Way Forward & Conclusion
                     </Button>
                 </div>
             </nav>
@@ -398,7 +488,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.costOfDisaster, styles.section)}
-                id="internally-displaced"
+                id="invisible"
             >
                 <div className={_cs(styles.sectionContent)}>
                     <Header
@@ -427,7 +517,7 @@ function FcdoReport(props: Props) {
             </section>
             <section
                 className={_cs(styles.idTrends, styles.section)}
-                id="data-internally-displaced"
+                id="data-on"
             >
                 <div className={_cs(styles.idTrendsContent, styles.sectionContent)}>
                     <Header
@@ -443,53 +533,54 @@ function FcdoReport(props: Props) {
                         </p>
                     </div>
                     <div className={styles.barChartContent}>
-                        <div className={styles.barChart}>
-                            <div className={styles.barChartHeading}>
+                        <div className={styles.topContainer}>
+                            <div className={styles.barChart}>
                                 <Header
+                                    className={styles.header}
                                     heading="14 million"
                                     headingDescription="Estimated number of school-aged IDPs across all 13 countries as of the end of 2021"
-                                    headingSize="medium"
+                                    headingSize="large"
+                                    hideHeadingBorder
+                                />
+                                <Svg
+                                    src={barChart1}
+                                    className={styles.bar}
                                 />
                             </div>
-                            <img
-                                src={barChart3}
-                                className={styles.background}
-                                alt=""
-                            />
-                        </div>
-                        <div className={styles.barChart}>
-                            <div className={styles.barChartHeading}>
+                            <div className={styles.barChart}>
                                 <Header
+                                    className={styles.header}
+                                    headingClassName={styles.conflict}
                                     heading="13m"
                                     headingDescription="by conflict and violence"
-                                    headingSize="medium"
+                                    headingSize="large"
+                                    hideHeadingBorder
+                                />
+                                <Svg
+                                    src={barChart2}
+                                    className={styles.smallBar}
                                 />
                             </div>
-                            <img
-                                src={barChart1}
-                                className={styles.background}
-                                alt=""
-                            />
-                        </div>
-                        <div className={styles.barChart}>
-                            <div className={styles.barChartHeading}>
+                            <div className={styles.barChart}>
                                 <Header
+                                    className={styles.header}
                                     heading="1m"
+                                    headingClassName={styles.disaster}
                                     headingDescription="by disaster"
-                                    headingSize="medium"
+                                    headingSize="large"
+                                    hideHeadingBorder
+                                />
+                                <Svg
+                                    src={barChart3}
+                                    className={styles.smallBar}
                                 />
                             </div>
-                            <img
-                                src={barChart2}
-                                className={styles.background}
-                                alt=""
-                            />
-                            <Button
-                                name="download"
-                            >
-                                Download Dataset
-                            </Button>
                         </div>
+                        <Button
+                            name={undefined}
+                        >
+                            Download Dataset
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -508,7 +599,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.education, styles.section)}
-                id="education-cost"
+                id="estimating"
             >
                 <div className={_cs(styles.sectionContent)}>
                     <Header
@@ -558,7 +649,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.idAccess, styles.section)}
-                id="quality-education"
+                id="access"
             >
                 <div className={_cs(styles.idAccessContent, styles.sectionContent)}>
                     <Header
@@ -586,11 +677,13 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionCaption}>
                                 {descriptionCaption}
                             </p>
-                            <Quote
-                                quote={qualityEducationQuote}
-                                author={qualityEducationAuthor}
-                            />
                         </div>
+                    </div>
+                    <div className={styles.quotes}>
+                        <Quote
+                            quote={qualityEducationQuote}
+                            author={qualityEducationAuthor}
+                        />
                     </div>
                 </div>
             </section>
@@ -607,6 +700,12 @@ function FcdoReport(props: Props) {
                                     src={spotLight1}
                                     alt=""
                                 />
+                                <div className={styles.caption}>
+                                    <div className={styles.subHeading}>
+                                        Gender disparities in access to
+                                        education in Somalia and Ethiopia
+                                    </div>
+                                </div>
                             </div>
                             <div className={styles.spotlightItem}>
                                 <img
@@ -614,6 +713,12 @@ function FcdoReport(props: Props) {
                                     src={spotLight2}
                                     alt=""
                                 />
+                                <div className={styles.caption}>
+                                    <div className={styles.subHeading}>
+                                        Estimating the number of IDPs at
+                                        risk of missing out on education
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -660,7 +765,7 @@ function FcdoReport(props: Props) {
                         heading="Conclusion"
                         headingSize="large"
                     />
-                    <div className={styles.idConclusionTopContainer}>
+                    <div className={styles.description}>
                         <p className={styles.descriptionParagraph}>
                             {conclusionDescription}
                         </p>
