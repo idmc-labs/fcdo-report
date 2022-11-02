@@ -431,12 +431,17 @@ function FcdoReport(props: Props) {
                         </p>
                         <p className={styles.descriptionParagraph}>
                             {heroParagraph4}
+                            <div className={styles.dataReportButton}>
+                                <ButtonLikeLink
+                                    name={undefined}
+                                    href={reportLink}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Download Report
+                                </ButtonLikeLink>
+                            </div>
                         </p>
-                        <Button
-                            name={undefined}
-                        >
-                            Download Dataset
-                        </Button>
                     </div>
                     <footer className={styles.heroFooter}>
                         <img

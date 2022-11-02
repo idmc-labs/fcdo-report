@@ -27,7 +27,7 @@ function Item(props: ItemProps) {
 
     return (
         <div className={_cs(className, styles.keyMessageContent)}>
-            {order}
+            <div className={styles.order}>{order}</div>
             <div className={styles.keyMessageVl}>
                 <div className={styles.keyMessageDescription}>
                     {description}

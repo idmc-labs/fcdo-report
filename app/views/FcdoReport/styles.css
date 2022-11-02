@@ -149,6 +149,16 @@
                 .description-paragraph {
                     max-width: 40rem;
                     font-size: var(--tui-font-size-medium);
+
+                    .data-report-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        border-radius: 0.25rem;
+                        padding: var(--tui-spacing-small) 0 0 0;
+                        gap: var(--tui-spacing-medium);
+                        text-align: center;
+                    }
                 }
             }
 
@@ -234,6 +244,7 @@
                 .key-findings-title {
                     display: flex;
                     flex-direction: column;
+                    font-size: var(--tui-font-size-small);
                     font-style: italic;
                     gap: var(--tui-spacing-medium);
                 }
@@ -581,9 +592,7 @@
                 }
 
                 .description-container {
-                    padding: var(--tui-spacing-small) 0;
-                    max-width: 50%;
-                    gap: var(--tui-spacing-small);
+                    padding: var(--tui-spacing-small);
 
                     .description-paragraph {
                         margin: 0;
