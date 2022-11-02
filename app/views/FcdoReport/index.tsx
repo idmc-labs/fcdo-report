@@ -647,14 +647,16 @@ function FcdoReport(props: Props) {
                         />
                         <div className={styles.estimatedCaption}>
                             {estimatedCaption}
-                            <ButtonLikeLink
-                                name={undefined}
-                                href={dataSetLink}
-                                target="_blank"
-                                rel="noreferrer noopener"
-                            >
-                                Download Dataset
-                            </ButtonLikeLink>
+                            <div className={styles.datasetButton}>
+                                <ButtonLikeLink
+                                    name={undefined}
+                                    href={dataSetLink}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Download Dataset
+                                </ButtonLikeLink>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -674,7 +676,7 @@ function FcdoReport(props: Props) {
             </div>
             <section
                 className={_cs(styles.idAccess, styles.section)}
-                id="access"
+                id="access-to-quality-education"
             >
                 <div className={_cs(styles.idAccessContent, styles.sectionContent)}>
                     <Header
@@ -739,16 +741,11 @@ function FcdoReport(props: Props) {
                                     />
                                     <div className={styles.caption}>
                                         <div className={styles.subHeading}>
-                                            7 Years after the Gorkha Earthquake in Nepal
+                                            Gender disparities in access to
+                                            education in Somalia and Ethiopia
                                         </div>
                                     </div>
                                 </a>
-                                <div className={styles.caption}>
-                                    <div className={styles.subHeading}>
-                                        Gender disparities in access to
-                                        education in Somalia and Ethiopia
-                                    </div>
-                                </div>
                             </div>
                             <div className={styles.spotlightItem}>
                                 <a
@@ -763,16 +760,11 @@ function FcdoReport(props: Props) {
                                     />
                                     <div className={styles.caption}>
                                         <div className={styles.subHeading}>
-                                            7 Years after the Gorkha Earthquake in Nepal
+                                            Estimating the number of IDPs at
+                                            risk of missing out on education
                                         </div>
                                     </div>
                                 </a>
-                                <div className={styles.caption}>
-                                    <div className={styles.subHeading}>
-                                        Estimating the number of IDPs at
-                                        risk of missing out on education
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

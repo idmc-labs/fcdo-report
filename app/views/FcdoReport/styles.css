@@ -281,6 +281,10 @@
                 display: flex;
                 justify-content: space-between;
                 font-style: italic;
+
+                .dataset-button {
+                    font-style: normal;
+                }
             }
         }
     }
@@ -564,6 +568,9 @@
                         width: 100%;
                     }
                     .description-caption {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         font-size: var(--tui-font-size-extra-small);
                         font-style: italic;
                     }
