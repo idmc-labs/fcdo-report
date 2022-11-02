@@ -29,11 +29,11 @@ import spotLight1 from '#resources/img/spot-light1.jpg';
 import spotLight2 from '#resources/img/spot-light2.jpg';
 import educationImage from '#resources/img/education-image.png';
 import tableData from '#resources/img/table-data.jpg';
-import coverImage3 from '#resources/img/cover-img3.jpg';
 import barChart1 from '#resources/img/all.svg';
 import barChart2 from '#resources/img/conflict.svg';
 import barChart3 from '#resources/img/disaster.svg';
 import ageGender from '#resources/img/age-gender.png';
+import coverImage3 from '#resources/img/cover-img3.jpg';
 import coverImage2 from '#resources/img/cover-img2.jpg';
 import coverImage4 from '#resources/img/cover-img4.jpg';
 import coverImage5 from '#resources/img/cover-img5.jpg';
@@ -83,6 +83,9 @@ import {
     primarySchoolCaption,
     oldWallCaption,
     oldWallSubCaption,
+    dataSetLink,
+    keyFindingsTitle,
+    qualityEducationSeeSpotLight,
 } from './data';
 import WayForwardContent from './WayForwardContent';
 
@@ -151,7 +154,7 @@ const sectionOptions = [
 const keyFindings = [
     {
         key: '1',
-        description: 'There were 14 millons IDPs aged five to 17 in the 13 countries studied at the end of 2021.* Thirteen million had been displaced by conflict and violence and million by disasters.',
+        description: 'There were 14 million IDPs aged five to 17 in the 13 countries studied at the end of 2021. This includes 7.1 million boys and 6.9 million girls.',
         image: keyFinding1,
     },
     {
@@ -396,6 +399,14 @@ function FcdoReport(props: Props) {
                     >
                         The Way Forward & Conclusion
                     </Button>
+                    <Button
+                        name="way-forward"
+                        onClick={handleNavClick}
+                        className={styles.navItem}
+                        variant="transparent"
+                    >
+                        Download Report
+                    </Button>
                 </div>
             </nav>
             <section className={_cs(styles.hero, styles.section)}>
@@ -426,6 +437,11 @@ function FcdoReport(props: Props) {
                         <p className={styles.descriptionParagraph}>
                             {heroParagraph4}
                         </p>
+                        <Button
+                            name={undefined}
+                        >
+                            Download Dataset
+                        </Button>
                     </div>
                     <footer className={styles.heroFooter}>
                         <img
@@ -457,11 +473,14 @@ function FcdoReport(props: Props) {
                         headingSize="large"
                     />
                     <div className={styles.keyFindingsContainer}>
-                        <WayForwardContent
-                            selectedItem={selectedKeyFinding}
-                            onItemClick={setSelectedKeyFinding}
-                            data={keyFindings}
-                        />
+                        <div className={styles.keyFindingsTitle}>
+                            {keyFindingsTitle}
+                            <WayForwardContent
+                                selectedItem={selectedKeyFinding}
+                                onItemClick={setSelectedKeyFinding}
+                                data={keyFindings}
+                            />
+                        </div>
                         <img
                             className={styles.keyFindingsImg}
                             src={keyFindings?.find((item) => item.key === selectedKeyFinding)
@@ -547,7 +566,7 @@ function FcdoReport(props: Props) {
                                     className={styles.bar}
                                 />
                             </div>
-                            <div className={styles.barChart}>
+                            <div className={styles.smallBarChart}>
                                 <Header
                                     className={styles.header}
                                     headingClassName={styles.conflict}
@@ -561,7 +580,7 @@ function FcdoReport(props: Props) {
                                     className={styles.smallBar}
                                 />
                             </div>
-                            <div className={styles.barChart}>
+                            <div className={styles.smallBarChart}>
                                 <Header
                                     className={styles.header}
                                     heading="1m"
@@ -576,11 +595,14 @@ function FcdoReport(props: Props) {
                                 />
                             </div>
                         </div>
-                        <Button
+                        <ButtonLikeLink
                             name={undefined}
+                            href={dataSetLink}
+                            target="_blank"
+                            rel="noreferrer noopener"
                         >
                             Download Dataset
-                        </Button>
+                        </ButtonLikeLink>
                     </div>
                 </div>
             </section>
@@ -607,11 +629,6 @@ function FcdoReport(props: Props) {
                         headingSize="large"
                     />
                     <div className={styles.topEducationContainer}>
-                        <img
-                            src={educationImage}
-                            className={styles.background}
-                            alt=""
-                        />
                         <div className={styles.description}>
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph1}
@@ -619,6 +636,11 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph2}
                             </p>
+                            <img
+                                src={educationImage}
+                                className={styles.background}
+                                alt=""
+                            />
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph3}
                             </p>
@@ -630,6 +652,14 @@ function FcdoReport(props: Props) {
                         />
                         <div className={styles.estimatedCaption}>
                             {estimatedCaption}
+                            <ButtonLikeLink
+                                name={undefined}
+                                href={dataSetLink}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                Download Dataset
+                            </ButtonLikeLink>
                         </div>
                     </div>
                 </div>
@@ -657,6 +687,16 @@ function FcdoReport(props: Props) {
                         headingSize="large"
                     />
                     <div className={styles.idAccessContainer}>
+                        <div className={styles.belowImgContainer}>
+                            <img
+                                src={ageGender}
+                                className={styles.background}
+                                alt=""
+                            />
+                            <p className={styles.descriptionCaption}>
+                                {descriptionCaption}
+                            </p>
+                        </div>
                         <div className={styles.descriptionContainer}>
                             <p className={styles.descriptionParagraph}>
                                 {qualityEducationParagraph1}
@@ -666,16 +706,13 @@ function FcdoReport(props: Props) {
                             </p>
                             <p className={styles.descriptionParagraph}>
                                 {qualityEducationParagraph3}
-                            </p>
-                        </div>
-                        <div className={styles.belowImgContainer}>
-                            <img
-                                src={ageGender}
-                                className={styles.background}
-                                alt=""
-                            />
-                            <p className={styles.descriptionCaption}>
-                                {descriptionCaption}
+                                <a
+                                    href={`${reportLink}#page=14`}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    (see spotlight).
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -695,11 +732,22 @@ function FcdoReport(props: Props) {
                     <div className={styles.bottomContainer}>
                         <div className={styles.itemList}>
                             <div className={styles.spotlightItem}>
-                                <img
-                                    className={styles.spotlightImage}
-                                    src={spotLight1}
-                                    alt=""
-                                />
+                                <a
+                                    href={`${reportLink}#page=11`}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    <img
+                                        className={styles.spotlightImage}
+                                        src={spotLight1}
+                                        alt=""
+                                    />
+                                    <div className={styles.caption}>
+                                        <div className={styles.subHeading}>
+                                            7 Years after the Gorkha Earthquake in Nepal
+                                        </div>
+                                    </div>
+                                </a>
                                 <div className={styles.caption}>
                                     <div className={styles.subHeading}>
                                         Gender disparities in access to
@@ -708,11 +756,22 @@ function FcdoReport(props: Props) {
                                 </div>
                             </div>
                             <div className={styles.spotlightItem}>
-                                <img
-                                    className={styles.spotlightImage}
-                                    src={spotLight2}
-                                    alt=""
-                                />
+                                <a
+                                    href={`${reportLink}#page=14`}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    <img
+                                        className={styles.spotlightImage}
+                                        src={spotLight2}
+                                        alt=""
+                                    />
+                                    <div className={styles.caption}>
+                                        <div className={styles.subHeading}>
+                                            7 Years after the Gorkha Earthquake in Nepal
+                                        </div>
+                                    </div>
+                                </a>
                                 <div className={styles.caption}>
                                     <div className={styles.subHeading}>
                                         Estimating the number of IDPs at
