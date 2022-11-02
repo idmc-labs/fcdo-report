@@ -9,6 +9,7 @@ export const youngGirlSubCaption = 'Suleiman, November 2021';
 export const studingCaption = 'In the Nuevo Golfo neighbourhood of Barranquilla, Colombia, two sisters have been able to continue their education remotely.';
 export const studingSubCaption = '© UNICEF/UN0413033/Romero, September 2020';
 
+export const keyFindingsTitle = 'The findings are based on the 13 countries analysed in this report: Afghanistan, Colombia, the Democratic Republic of the Congo, Ethiopia, Iraq, Mozambique, Myanmar, Nigeria, Somalia, South Sudan, Sudan, Syria and Yemen.';
 export const oldWallCaption = 'Only the walls, covered in bullet holes, of a local school on Erebiti, Ethiopia are left standing following conflict.';
 export const oldWallSubCaption = '© OCHA/ Liz Loh-Taylor, July 2022';
 
@@ -29,9 +30,13 @@ export const estimatingEducationParagraph2 = 'For each country, we estimated the
 export const estimatingEducationParagraph3 = 'The cost estimates do not correspond to the humanitarian funding received, nor do they reflect actual expenditure on IDPs’ education. Rather, they are intended to represent the amount that humanitarian responders would have required to provide education support to all displaced children for a year.';
 export const estimatedCaption = 'Estimated cost of providing education support for one internally displaced child and all school-aged IDPs in 13 countries';
 
-export const qualityEducationParagraph1 = 'Displacement affects children’s education in many ways, reducing access and undermining equity, quality and the way it is managed. Schooling is most often interrupted, sometimes only for a few days or weeks, but in other cases for much longer. Cost is one of the most common barriers to education for IDPs, but language barriers, stigmatisation, psychological trauma and safety concerns are other common obstacles. Displaced girls tend to face heightened barriers to learning (see spotlight).';
+export const dataSetLink = 'https://www.internal-displacement.org/sites/default/files/2022-11/2022.11.17_DATASET_IDMC-FCDO-report_Informing%20better%20access%20to%20education%20for%20IDPs.xlsx';
+
+export const qualityEducationParagraph1 = 'Displacement affects children’s education in many ways, reducing access and undermining equity, quality and the way it is managed. Schooling is most often interrupted, sometimes only for a few days or weeks, but in other cases for much longer. Cost is one of the most common barriers to education for IDPs, but language barriers, stigmatisation, psychological trauma and safety concerns are other common obstacles. Displaced girls tend to face heightened barriers to learning';
 export const qualityEducationParagraph2 = 'There are no internationally comparable figures on IDPs’ school attendance and completion, learning outcomes or out-of-school rates, but such information is vital to planning and costing effective responses. In absence of accurate, current and comparable figures, IDMC estimated the number of displaced children likely to be receiving education support or at risk of missing out on education in 13 countries based on information from OCHA’s humanitarian needs overviews and humanitarian response plans.';
-export const qualityEducationParagraph3 = 'We estimate that more than nine million internally displaced children could be at risk of missing out on education because they did not receive support through humanitarian response plans in 2021. This does not, however, consider support they may be receiving directly from governments or other actors (see spotlight).';
+export const qualityEducationParagraph3 = 'We estimate that more than nine million internally displaced children could be at risk of missing out on education because they did not receive support through humanitarian response plans in 2021. This does not, however, consider support they may be receiving directly from governments or other actors ';
+export const qualityEducationSeeSpotLight = '(see spotlight).';
+
 export const descriptionCaption = 'Estimated number of school-aged IDPs across all 13 countries as of the end of 2021 by age group and sex';
 
 export const qualityEducationQuote = '“In IDPs’ settlements, teenage girls stay at home and do chores. They are vulnerable to intimidation and harassment from the unstable environment they find themselves in, and their parents keep them at home because they are afraid for their safety.”';

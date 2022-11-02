@@ -1,0 +1,46 @@
+.key-message-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: var(--tui-font-size-double-ultra-large);
+
+    .order {
+        margin-top: -4rem;
+        line-height: 1.3;
+        color: var(--color-number);
+        font-family: var(--tui-font-family-heading);
+
+        @media (max-width: 880px) {
+            margin-top: unset;
+            line-height: unset;
+            font-size: var(--tui-font-size-ultra-large);
+        }
+    }
+
+    .key-message-vl {
+        border-left: 2px solid var(--color-number);
+        height: 20rem;
+        font-family: var(--tui-font-family-heading);
+
+        @media (max-width: 880px) {
+            height: 8rem;
+        }
+    }
+
+    .key-message-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: var(--tui-spacing-medium);
+        color: var(--tui-color-brand);
+        font-size: var(--tui-font-size-large);
+    }
+}
+
+.key-message-container {
+    display: flex;
+    @media (max-width: 880px) {
+        flex-direction: column;
+    }
+
+}
