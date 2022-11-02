@@ -85,9 +85,9 @@ import {
     oldWallSubCaption,
     dataSetLink,
     keyFindingsTitle,
-    qualityEducationSeeSpotLight,
 } from './data';
 import WayForwardContent from './WayForwardContent';
+import KeyMessagesContent from './KeyMessagesContent';
 
 import styles from './styles.css';
 
@@ -193,7 +193,7 @@ const keyMessages = [
     },
     {
         key: '5',
-        description: 'The region already has successful initiatives to prevent, monitor, respond to and end disaster displacement that can inform future action.',
+        description: 'Promising guidance, tools and initiatives are energing to improve the quality, interoperability and sharing of data on IDPs’ education with the potential to inform future action.',
     },
 ];
 
@@ -395,7 +395,7 @@ function FcdoReport(props: Props) {
                         The Way Forward & Conclusion
                     </Button>
                     <Button
-                        name="way-forward"
+                        name="download-report"
                         onClick={handleNavClick}
                         className={styles.navItem}
                         variant="transparent"
@@ -456,7 +456,7 @@ function FcdoReport(props: Props) {
                         heading="Key Messages"
                         headingSize="large"
                     />
-                    <WayForwardContent
+                    <KeyMessagesContent
                         data={keyMessages}
                     />
                 </div>

@@ -17,6 +17,7 @@
     --tui-font-size-super-large: 2.2rem;
     --tui-font-size-mega-large: 3rem;
     --tui-font-size-ultra-large: 4rem;
+    --tui-font-size-double-ultra-large: 10rem;
 
     --tui-color-background-scrollbar: transparent;
     --tui-color-foreground-scrollbar: #cccccc;
@@ -59,6 +60,7 @@
     --color-background-dark: #193256;
     --color-text-on-dark: #ffffff;
     --color-text: #333333;
+    --color-number: #e6e6e6;
 
     --color-orange: rgb(239, 125, 0);
     --color-blue: rgb(1, 142, 202);

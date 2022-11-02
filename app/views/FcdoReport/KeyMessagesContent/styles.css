@@ -1,0 +1,38 @@
+.key-message-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-number);
+    font-family: var(--tui-font-family-heading);
+    font-size: var(--tui-font-size-double-ultra-large);
+
+    @media (max-width: 880px) {
+        font-size: var(--tui-font-size-mega-large);
+    }
+
+    .key-message-vl {
+        border-left: 2px solid var(--color-number);
+        height: 13rem;
+
+        @media (max-width: 880px) {
+            height: 8rem;
+        }
+    }
+
+    .key-message-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: var(--tui-spacing-medium);
+        color: var(--tui-color-brand);
+        font-size: var(--tui-font-size-medium);
+    }
+}
+
+.key-message-container {
+    display: flex;
+    @media (max-width: 880px) {
+        flex-direction: column;
+    }
+
+}
