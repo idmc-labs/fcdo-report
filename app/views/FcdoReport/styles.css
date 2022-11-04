@@ -100,7 +100,7 @@
         .section-content {
             display: flex;
             flex-direction: column;
-            padding: var(--tui-spacing-ultra-large) var(--tui-spacing-mega-large);
+            padding: var(--tui-spacing-mid-mega-large) var(--tui-spacing-mega-large);
             width: 100%;
             max-width: var(--width-page-max);
             gap: var(--tui-spacing-extra-large);
@@ -252,7 +252,7 @@
                 .key-findings-img {
                     width: 33rem;
                     height: 100%;
-                    object-position: 0% 85%;
+                    object-position: 0% 98%;
                     object-fit: contain;
 
                     @media (max-width: 880px) {
@@ -309,15 +309,21 @@
 
             .description {
                 .description-paragraph {
-                    max-width: 35rem;
+                    max-width: 48rem;
                     font-size: var(--tui-font-size-medium);
                 }
             }
             .right-container {
                 .background {
-                    max-width: 23rem;
+                    max-width: 16rem;
                 }
             } 
+        }
+
+        .quote{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .bottom-container {
@@ -403,11 +409,11 @@
                 }
 
                 .bar {
-                    height: 32rem;
+                    height: 34rem;
                 }
 
-                .small-bar {
-                    height: 29rem;
+                .bar-caption {
+                    font-size: var(--tui-spacing-small);
                 }
             }
             .small-bar-chart {
@@ -415,7 +421,7 @@
                 flex-basis: calc(32% - var(--tui-spacing-super-large) * 2 / 3);
                 flex-direction: column;
                 flex-shrink: 0;
-                gap: var(--tui-spacing-super-large);
+                gap: var(--tui-spacing-extra-large);
 
                 .header {
                     text-align: center;
@@ -429,18 +435,25 @@
                     }
                 }
 
-                .bar {
+                .small-bar {
                     height: 30rem;
                 }
 
-                .small-bar {
-                    height: 30rem;
+                .small-bar-caption {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: var(--tui-spacing-mega-large);
+                    font-size: var(--tui-spacing-small);
                 }
             }
 
             @media (max-width: 880px) {
                 flex-direction: column;
             }
+        }
+
+        .bar-caption {
+            font-size: var(--tui-spacing-small);
         }
     }
 
