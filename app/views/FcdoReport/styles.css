@@ -285,6 +285,8 @@
 
             .description {
                 .description-paragraph {
+                    margin: var(--tui-spacing-medium) auto;
+                    max-width: 60rem;
                     font-size: var(--tui-font-size-medium);
                 }
             }
@@ -304,7 +306,6 @@
         .top-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             gap: var(--tui-spacing-large);
 
             .description {
@@ -386,6 +387,12 @@
         }
     }
 
+    .bar-chart-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .bar-chart-content {
         display: flex;
         align-items: flex-end;
@@ -556,14 +563,12 @@
             gap: var(--tui-spacing-large);
 
             .description-container {
-                display: flex;
-                flex-direction: column;
-                padding: var(--tui-spacing-small) 0;
-                gap: var(--tui-spacing-small);
-
                 .description-paragraph {
-                    margin: 0;
-                    max-width: 36rem;
+                    margin: var(--tui-spacing-medium) auto;
+                    max-width: 60rem;
+                }
+                @media (max-width: 880px) {
+                    max-width: 100%;
                 }
             }
 
@@ -608,7 +613,8 @@
                     padding: var(--tui-spacing-small);
 
                     .description-paragraph {
-                        margin: 0;
+                        margin: var(--tui-spacing-medium) auto;
+                        max-width: 60rem;
                     }
                     @media (max-width: 880px) {
                         max-width: 100%;

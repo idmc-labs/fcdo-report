@@ -27,7 +27,6 @@ import Svg from '#components/Svg';
 
 import spotLight1 from '#resources/img/spot-light1.jpg';
 import spotLight2 from '#resources/img/spot-light2.jpg';
-import educationImage from '#resources/img/education-image.png';
 import tableData from '#resources/img/table-data.jpg';
 import barChart1 from '#resources/img/all.svg';
 import barChart2 from '#resources/img/conflict.svg';
@@ -40,10 +39,7 @@ import coverImage5 from '#resources/img/cover-img5.jpg';
 import keyFinding1 from '#resources/img/key-finding1.png';
 import keyFinding2 from '#resources/img/key-finding2.png';
 import keyFinding3 from '#resources/img/key-finding3.png';
-
-import dataGaps from '#resources/img/data-gaps.png';
 import idmcLogo from '#resources/img/idmc-white.svg';
-import bookCover from '#resources/img/book-cover.png';
 import bannerImg1 from '#resources/img/banner-img1.jpg';
 
 import {
@@ -568,10 +564,10 @@ function FcdoReport(props: Props) {
                             {dataInternallyDisplacedDescription2}
                         </p>
                     </div>
+                    <div className={styles.barChartTitle}>
+                        {barChartTitle}
+                    </div>
                     <div className={styles.barChartContent}>
-                        <div className={styles.barTitle}>
-                            {barChartTitle}
-                        </div>
                         <div className={styles.topContainer}>
                             <div className={styles.barChart}>
                                 <Header
@@ -874,7 +870,7 @@ function FcdoReport(props: Props) {
                     <div className={styles.topContent}>
                         <div className={styles.leftContent}>
                             <img
-                                src={bookCover}
+                                src="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Cover_for_Download.png"
                                 className={styles.bookCover}
                                 alt=""
                             />
