@@ -27,7 +27,6 @@ import Svg from '#components/Svg';
 
 import spotLight1 from '#resources/img/spot-light1.jpg';
 import spotLight2 from '#resources/img/spot-light2.jpg';
-import educationImage from '#resources/img/education-image.png';
 import tableData from '#resources/img/table-data.jpg';
 import barChart1 from '#resources/img/all.svg';
 import barChart2 from '#resources/img/conflict.svg';
@@ -40,10 +39,7 @@ import coverImage5 from '#resources/img/cover-img5.jpg';
 import keyFinding1 from '#resources/img/key-finding1.png';
 import keyFinding2 from '#resources/img/key-finding2.png';
 import keyFinding3 from '#resources/img/key-finding3.png';
-
-import dataGaps from '#resources/img/data-gaps.png';
 import idmcLogo from '#resources/img/idmc-white.svg';
-import bookCover from '#resources/img/book-cover.png';
 import bannerImg1 from '#resources/img/banner-img1.jpg';
 
 import {
@@ -85,6 +81,8 @@ import {
     oldWallSubCaption,
     dataSetLink,
     keyFindingsTitle,
+    barChartCaption,
+    barChartTitle,
 } from './data';
 import WayForwardContent from './WayForwardContent';
 import KeyMessagesContent from './KeyMessagesContent';
@@ -99,6 +97,16 @@ const svgTitles = [
 ];
 
 const sectionOptions = [
+    {
+        key: 'foreward',
+        label: 'Foreward',
+        startPage: '7',
+    },
+    {
+        label: 'Key Messages and Findings',
+        key: 'Key Messages and Findings',
+        startPage: '8',
+    },
     {
         label: 'Introduction',
         key: 'Introduction',
@@ -326,6 +334,17 @@ function FcdoReport(props: Props) {
             >
                 Access to quality education
             </Button>
+            <Button
+                name="way-forward"
+                onClick={handleNavClick}
+                className={_cs(
+                    styles.navItem,
+                    !isNavShown && styles.dropdownButton,
+                )}
+                variant="transparent"
+            >
+                The Way Forward & Conclusion
+            </Button>
         </>
     ), [
         isNavShown,
@@ -386,14 +405,6 @@ function FcdoReport(props: Props) {
                             {navMenuItems}
                         </PopupButton>
                     )}
-                    <Button
-                        name="way-forward"
-                        onClick={handleNavClick}
-                        className={styles.navItem}
-                        variant="transparent"
-                    >
-                        The Way Forward & Conclusion
-                    </Button>
                     <Button
                         name="download-report"
                         onClick={handleNavClick}
@@ -519,18 +530,20 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {internallyDisplacedParagraph1}
                             </p>
-                            <Quote
-                                quote={internallyDisplacedQuote}
-                                author={internallyDisplacedAuthor}
-                            />
                         </div>
                         <div className={styles.rightContainer}>
                             <img
-                                src={dataGaps}
+                                src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Data-Gap.png"
                                 className={styles.background}
                                 alt=""
                             />
                         </div>
+                    </div>
+                    <div className={styles.quote}>
+                        <Quote
+                            quote={internallyDisplacedQuote}
+                            author={internallyDisplacedAuthor}
+                        />
                     </div>
                 </div>
             </section>
@@ -551,13 +564,16 @@ function FcdoReport(props: Props) {
                             {dataInternallyDisplacedDescription2}
                         </p>
                     </div>
+                    <div className={styles.barChartTitle}>
+                        {barChartTitle}
+                    </div>
                     <div className={styles.barChartContent}>
                         <div className={styles.topContainer}>
                             <div className={styles.barChart}>
                                 <Header
                                     className={styles.header}
                                     heading="14 million"
-                                    headingDescription="Estimated number of school-aged IDPs across all 13 countries as of the end of 2021"
+                                    headingDescription="school-aged"
                                     headingSize="large"
                                     hideHeadingBorder
                                 />
@@ -565,6 +581,9 @@ function FcdoReport(props: Props) {
                                     src={barChart1}
                                     className={styles.bar}
                                 />
+                                <div className={styles.barCaption}>
+                                    {barChartCaption}
+                                </div>
                             </div>
                             <div className={styles.smallBarChart}>
                                 <Header
@@ -579,6 +598,9 @@ function FcdoReport(props: Props) {
                                     src={barChart2}
                                     className={styles.smallBar}
                                 />
+                                <div className={styles.smallBarCaption}>
+                                    {barChartCaption}
+                                </div>
                             </div>
                             <div className={styles.smallBarChart}>
                                 <Header
@@ -637,7 +659,7 @@ function FcdoReport(props: Props) {
                                 {estimatingEducationParagraph2}
                             </p>
                             <img
-                                src={educationImage}
+                                src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs.png"
                                 className={styles.background}
                                 alt=""
                             />
@@ -848,7 +870,7 @@ function FcdoReport(props: Props) {
                     <div className={styles.topContent}>
                         <div className={styles.leftContent}>
                             <img
-                                src={bookCover}
+                                src="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Cover_for_Download.png"
                                 className={styles.bookCover}
                                 alt=""
                             />
