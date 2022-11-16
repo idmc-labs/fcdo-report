@@ -198,7 +198,7 @@ const keyFindings = [
     },
     {
         key: '2',
-        description: 'Afghanistan, the Democractic Republic of the Congo and Syria had the highest number of school-aged IDPs, with two million, 1.9 and 1.7 million respectively.',
+        description: 'Afghanistan, the Democratic Republic of the Congo and Syria had the highest number of school-aged IDPs, with two million, 1.9 and 1.7 million respectively.',
         image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-2.png',
     },
     {
@@ -221,7 +221,7 @@ const keyFindings = [
 const keyMessages = [
     {
         key: '1',
-        description: 'Internal displacement affects children’s access to education, it’s quality and their learning outcomes. These impacts vary depending on a child’s gender, disability status and other characteristics.',
+        description: 'Internal displacement affects children’s access to education, its quality and their learning outcomes. These impacts vary depending on a child’s gender, disability status and other characteristics.',
     },
     {
         key: '2',
@@ -229,15 +229,15 @@ const keyMessages = [
     },
     {
         key: '3',
-        description: 'Governments are primarily responsible for the provision of IDPs’ education and related data collection. They should adapt their education data systems to identify IDPs safely and monitor their education needs more systematically.',
+        description: 'Governments are primarily responsible for the provision of IDPs’ education and related data collection. Adapting their education data systems to identify IDPs safely and monitor their education needs more systematically is essential.',
     },
     {
         key: '4',
-        description: 'Goverments and humanitarian and development organisations need to coordinate better and standardise the definitions and indicators they use if data gaps are to be filled.',
+        description: 'Governments and humanitarian and development organisations must coordinate and standardise the definitions and indicators they use if data gaps are to be filled.',
     },
     {
         key: '5',
-        description: 'Promising guidance, tools and initiatives are energing to improve the quality, interoperability and sharing of data on IDPs’ education with the potential to inform future action.',
+        description: 'Promising guidance, tools and initiatives are emerging to improve the quality, interoperability and sharing of data on IDPs’ education with the potential to inform future action.',
     },
 ];
 
@@ -357,7 +357,7 @@ function FcdoReport(props: Props) {
                 )}
                 variant="transparent"
             >
-                Estimating the education costs for IDPs
+                Estimating education costs for IDPs
             </Button>
             <Button
                 name="access-to-quality-education"
@@ -691,7 +691,7 @@ function FcdoReport(props: Props) {
             >
                 <div className={_cs(styles.sectionContent)}>
                     <Header
-                        heading="Estimating the education costs for IDPs"
+                        heading="Estimating education costs for IDPs"
                         headingSize="large"
                     />
                     <div className={styles.topEducationContainer}>
@@ -818,7 +818,7 @@ function FcdoReport(props: Props) {
                                 >
                                     <img
                                         className={styles.spotlightImage}
-                                        src={spotLight1}
+                                        src={spotLight2}
                                         alt=""
                                     />
                                     <div className={styles.caption}>
@@ -837,7 +837,7 @@ function FcdoReport(props: Props) {
                                 >
                                     <img
                                         className={styles.spotlightImage}
-                                        src={spotLight2}
+                                        src={spotLight1}
                                         alt=""
                                     />
                                     <div className={styles.caption}>
