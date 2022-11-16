@@ -1,8 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 230.5 344.5" style="enable-background:new 0 0 230.5 344.5;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 230.5 344.5"
+   style="enable-background:new 0 0 230.5 344.5;"
+   xml:space="preserve"
+   id="svg136"
+   sodipodi:docname="all.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs140">
+	
+
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</defs><sodipodi:namedview
+   id="namedview138"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="2.5079826"
+   inkscape:cx="84.729456"
+   inkscape:cy="140.75058"
+   inkscape:window-width="1920"
+   inkscape:window-height="1058"
+   inkscape:window-x="1920"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg136" />
+<style
+   type="text/css"
+   id="style2">
 	.st0{fill:none;stroke:#E6E6E6;stroke-width:0.5;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:#E6E7E8;stroke-width:0.5;stroke-miterlimit:10;}
 	.st2{fill:#646363;}
@@ -11,109 +120,257 @@
 	.st5{fill:#193256;}
 	.st6{letter-spacing:-1;}
 </style>
-<g id="Layer_1">
-	<line class="st0" x1="224.5" y1="316.4" x2="224.5" y2="0.9"/>
-	<line class="st0" x1="184.9" y1="315.7" x2="184.9" y2="0"/>
-	<line class="st0" x1="106.1" y1="315.8" x2="106.1" y2="1.3"/>
-	<line class="st0" x1="145.5" y1="315.8" x2="145.5" y2="0"/>
-	<line class="st1" x1="66.6" y1="316.2" x2="224.5" y2="316.2"/>
-	<text transform="matrix(1 0 0 1.0342 63.8774 326.3355)" class="st2 st3 st4">0</text>
-	<text transform="matrix(1 0 0 1.0342 143.6943 326.3453)" class="st2 st3 st4">1</text>
-	<text transform="matrix(1 0 0 1.0342 179.3994 326.3004)" class="st2 st3 st4">1.5</text>
-	<text transform="matrix(1 0 0 1.0342 222.0918 326.6871)" class="st2 st3 st4">2</text>
-	<text transform="matrix(1 0 0 1.0342 99.687 326.6871)"><tspan x="0" y="0" class="st2 st3 st4">0</tspan><tspan x="5.2" y="0" class="st2 st3 st4">.5</tspan></text>
-	<text transform="matrix(1 0 0 1.0342 65.3394 344.4801)" class="st2 st3 st4">IDPs in millions</text>
-	<line class="st0" x1="66.6" y1="316.2" x2="66.6" y2="0"/>
-</g>
-<g id="myanmar">
-	<g>
-		<path class="st5" d="M74.5,310.3h-4c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h4c2.2,0,4,1.8,4,4v0.8
-			C78.5,308.6,76.7,310.3,74.5,310.3"/>
-		<text transform="matrix(1 0 0 1.0342 16.4551 308.0533)" class="st2 st3 st4">Myanmar</text>
-	</g>
-</g>
-<g id="mozambique">
-	<g>
-		<path class="st5" d="M86.5,285.2H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h15.9c2.2,0,4,1.8,4,4v0.8
-			C90.4,283.4,88.7,285.2,86.5,285.2"/>
-		<text transform="matrix(1 0 0 1.0342 2.4097 282.9166)" class="st2 st3 st4">Mozambique</text>
-	</g>
-</g>
-<g id="iraq">
-	<g>
-		<path class="st5" d="M91.8,260.1H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h21.3c2.2,0,4,1.8,4,4v0.8
-			C95.8,258.3,94,260.1,91.8,260.1"/>
-		<text transform="matrix(1 0 0 1.0342 38.063 257.7789)" class="st2 st3 st4">Iraq</text>
-	</g>
-</g>
-<g id="colombia">
-	<g>
-		<path class="st5" d="M144.6,209.6h-74c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h74c2.2,0,4,1.8,4,4v0.8
-			C148.5,207.8,146.8,209.6,144.6,209.6"/>
-		<text transform="matrix(1 0 0 1.0342 15.7852 207.3346)" class="st2 st3 st4">Colombia</text>
-	</g>
-</g>
-<g id="southsudan">
-	<g>
-		<path class="st5" d="M111.6,234.9h-41c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h41c2.2,0,4,1.8,4,4v0.8
-			C115.6,233.2,113.8,234.9,111.6,234.9"/>
-		<text transform="matrix(1 0 0 1.0342 2.8013 232.6422)" class="st2 st3 st4">South Sudan</text>
-	</g>
-</g>
-<g id="sudan">
-	<g>
-		<path class="st5" d="M145.1,185.3H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h74.5c2.2,0,4,1.8,4,4v0.8
-			C149.1,183.5,147.3,185.3,145.1,185.3"/>
-		<text transform="matrix(1 0 0 1.0342 28.2729 182.9625)" class="st2 st3 st4">Sudan</text>
-	</g>
-</g>
-<g id="somalia">
-	<g>
-		<path class="st5" d="M145.8,160.4H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h75.2c2.2,0,4,1.8,4,4v0.8
-			C149.8,158.6,148,160.4,145.8,160.4"/>
-		<text transform="matrix(1 0 0 1.0342 21.9116 158.1134)" class="st2 st3 st4">Somalia</text>
-	</g>
-</g>
-<g id="ethiopia">
-	<g>
-		<path class="st5" d="M168.5,109.6h-98c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h98c2.2,0,4,1.8,4,4v0.8
-			C172.5,107.8,170.7,109.6,168.5,109.6"/>
-		<text transform="matrix(1 0 0 1.0342 21.1196 107.2726)" class="st2 st3 st4">Ethiopia</text>
-	</g>
-</g>
-<g id="nigeria">
-	<g>
-		<path class="st5" d="M151.3,135.4H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h80.8c2.2,0,4,1.8,4,4v0.8
-			C155.3,133.7,153.5,135.4,151.3,135.4"/>
-		<text transform="matrix(1 0 0 1.0342 24.8877 133.1563)" class="st2 st3 st4">Nigeria</text>
-	</g>
-</g>
-<g id="drcongo">
-	<g>
-		<text transform="matrix(1 0 0 1.0342 13.2217 32.4859)" class="st2 st3 st4">DR Congo</text>
-		<path class="st5" d="M214.7,34.8H70.6c-2.2,0-4-1.8-4-4V30c0-2.2,1.8-4,4-4h144.1c2.2,0,4,1.8,4,4v0.8
-			C218.7,33,216.9,34.8,214.7,34.8"/>
-	</g>
-</g>
-<g id="syria">
-	<g>
-		<text transform="matrix(1 0 0 1.0342 33.7114 57.9977)"><tspan x="0" y="0" class="st2 st3 st4">S</tspan><tspan x="5.2" y="0" class="st2 st3 st4">yria</tspan></text>
-		<path class="st5" d="M195.3,60.3H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h124.8c2.2,0,4,1.8,4,4v0.8
-			C199.3,58.5,197.5,60.3,195.3,60.3"/>
-	</g>
-</g>
-<g id="yemen">
-	<g>
-		<path class="st5" d="M169.8,84.6H70.6c-2.2,0-4-1.8-4-4v-0.8c0-2.2,1.8-4,4-4h99.3c2.2,0,4,1.8,4,4v0.8
-			C173.8,82.9,172,84.6,169.8,84.6"/>
-		<text transform="matrix(1 0 0 1.0342 26.7847 82.3424)"><tspan x="0" y="0" class="st2 st3 st4 st6">Y</tspan><tspan x="4.5" y="0" class="st2 st3 st4">emen</tspan></text>
-	</g>
-</g>
-<g id="afghanistan">
-	<g>
-		<text transform="matrix(1 0 0 1.0342 5.8076 7.0069)"><tspan x="0" y="0" class="st2 st3 st4">A</tspan><tspan x="5.8" y="0" class="st2 st3 st4">fghanistan</tspan></text>
-		<path class="st5" d="M218.5,9.3H70.6c-2.2,0-4-1.8-4-4V4.5c0-2.2,1.8-4,4-4h147.9c2.2,0,4,1.8,4,4v0.8
-			C222.5,7.5,220.7,9.3,218.5,9.3"/>
-	</g>
-</g>
+<line
+   class="st0"
+   x1="224.5"
+   y1="316.39999"
+   x2="224.5"
+   y2="0.89999998"
+   id="line4" /><line
+   class="st0"
+   x1="184.89999"
+   y1="315.70001"
+   x2="184.89999"
+   y2="0"
+   id="line6" /><line
+   class="st0"
+   x1="106.1"
+   y1="315.79999"
+   x2="106.1"
+   y2="1.3"
+   id="line8" /><line
+   class="st0"
+   x1="145.5"
+   y1="315.79999"
+   x2="145.5"
+   y2="0"
+   id="line10" /><line
+   class="st1"
+   x1="66.599998"
+   y1="316.20001"
+   x2="224.5"
+   y2="316.20001"
+   id="line12" /><text
+   transform="scale(0.98332648,1.0169562)"
+   class="st2 st3 st4"
+   id="text14"
+   x="64.960518"
+   y="320.89435"
+   style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.40246029px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">0</text><text
+   transform="scale(0.98332648,1.0169562)"
+   class="st2 st3 st4"
+   id="text16"
+   x="146.13081"
+   y="320.90396"
+   style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.40246029px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">1</text><text
+   transform="scale(0.98332648,1.0169562)"
+   class="st2 st3 st4"
+   id="text18"
+   x="182.44135"
+   y="320.85983"
+   style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.40246029px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">1.5</text><text
+   transform="scale(0.98332648,1.0169562)"
+   class="st2 st3 st4"
+   id="text20"
+   x="225.85764"
+   y="321.24008"
+   style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.40246029px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2</text><text
+   transform="scale(0.98332648,1.0169562)"
+   id="text26"
+   x="101.37732"
+   y="321.24008"
+   style="font-size:9.40246029px;stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+     x="101.37732"
+     y="321.24008"
+     class="st2 st3 st4"
+     id="tspan22"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.40246029px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">0</tspan><tspan
+     x="106.66549"
+     y="321.24008"
+     class="st2 st3 st4"
+     id="tspan24"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.40246029px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">.5</tspan></text><text
+   transform="scale(0.98332648,1.0169562)"
+   class="st2 st3 st4"
+   id="text28"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.25221px;font-family:ProximaNova-Bold;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.01696"
+   x="66.447311"
+   y="338.73639">IDPs in millions</text><line
+   class="st0"
+   x1="66.599998"
+   y1="316.20001"
+   x2="66.599998"
+   y2="0"
+   id="line30" />
+<g
+   id="myanmar"><path
+     class="st5"
+     d="m 74.5,310.3 h -4 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 4 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.3 -1.8,4 -4,4"
+     id="path33" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text35"
+     x="16.734118"
+     y="302.91696"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Myanmar</text></g>
+<g
+   id="mozambique"><path
+     class="st5"
+     d="M 86.5,285.2 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 15.9 c 2.2,0 4,1.8 4,4 v 0.8 c -0.1,2.2 -1.8,4 -4,4"
+     id="path40" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text42"
+     x="2.4505594"
+     y="278.19937"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Mozambique</text></g>
+<g
+   id="iraq"><path
+     class="st5"
+     d="M 91.8,260.1 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 21.3 c 2.2,0 4,1.8 4,4 v 0.8 c -0.1,2.2 -1.9,4 -4.1,4"
+     id="path47" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text49"
+     x="38.708405"
+     y="253.48082"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Iraq</text></g>
+<g
+   id="colombia"><path
+     class="st5"
+     d="m 144.6,209.6 h -74 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 74 c 2.2,0 4,1.8 4,4 v 0.8 c -0.1,2.2 -1.8,4 -4,4"
+     id="path54" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text56"
+     x="16.052858"
+     y="203.87761"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Colombia</text></g>
+<g
+   id="southsudan"><path
+     class="st5"
+     d="m 111.6,234.9 h -41 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 41 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.3 -1.8,4 -4,4"
+     id="path61" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text63"
+     x="2.8487995"
+     y="228.76323"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">South Sudan</text></g>
+<g
+   id="sudan"><g
+     id="g548"><g
+       id="g543"><path
+         class="st5"
+         d="M 145.1,185.3 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 74.5 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.2 -1.8,4 -4,4"
+         id="path68" /><text
+         transform="scale(0.98332648,1.0169562)"
+         class="st2 st3 st4"
+         id="text70"
+         x="28.752302"
+         y="179.91187"
+         style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Sudan</text></g></g></g>
+<g
+   id="somalia"><path
+     class="st5"
+     d="M 145.8,160.4 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 75.2 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.2 -1.8,4 -4,4"
+     id="path75" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text77"
+     x="22.283138"
+     y="155.4771"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Somalia</text></g>
+<g
+   id="ethiopia"><path
+     class="st5"
+     d="m 168.5,109.6 h -98 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 98 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.2 -1.8,4 -4,4"
+     id="path82" /><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text84"
+     x="21.477709"
+     y="105.48399"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Ethiopia</text></g>
+<g
+   id="nigeria"><g
+     id="g528"><g
+       id="g522"><g
+         id="g517"><path
+           class="st5"
+           d="M 151.3,135.4 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 80.8 c 2.2,0 4,1.8 4,4 v 0.8 c -0.1,2.3 -1.9,4 -4.1,4"
+           id="path89" /><text
+           transform="scale(0.98332648,1.0169562)"
+           class="st2 st3 st4"
+           id="text91"
+           x="25.309702"
+           y="130.93611"
+           style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Nigeria</text></g></g></g></g>
+<g
+   id="drcongo"><text
+     transform="scale(0.98332648,1.0169562)"
+     class="st2 st3 st4"
+     id="text96"
+     x="13.44589"
+     y="31.944246"
+     style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">DR Congo</text><path
+     class="st5"
+     d="M 214.7,34.8 H 70.6 c -2.2,0 -4,-1.8 -4,-4 V 30 c 0,-2.2 1.8,-4 4,-4 h 144.1 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.2 -1.8,4 -4,4"
+     id="path98" /></g>
+<g
+   id="syria"><text
+     transform="scale(0.98332648,1.0169562)"
+     id="text107"
+     x="34.28302"
+     y="57.030674"
+     style="font-size:9.25221175px;stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="34.28302"
+       y="57.030674"
+       class="st2 st3 st4"
+       id="tspan103"
+       style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">S</tspan><tspan
+       x="39.57119"
+       y="57.030674"
+       class="st2 st3 st4"
+       id="tspan105"
+       style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">yria</tspan></text><path
+     class="st5"
+     d="M 195.3,60.3 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 124.8 c 2.2,0 4,1.8 4,4 v 0.8 c -0.1,2.2 -1.9,4 -4.1,4"
+     id="path109" /></g>
+<g
+   id="yemen"><path
+     class="st5"
+     d="M 169.8,84.6 H 70.6 c -2.2,0 -4,-1.8 -4,-4 v -0.8 c 0,-2.2 1.8,-4 4,-4 h 99.3 c 2.2,0 4,1.8 4,4 v 0.8 c -0.1,2.3 -1.9,4 -4.1,4"
+     id="path114" /><text
+     transform="scale(0.98332648,1.0169562)"
+     id="text120"
+     x="27.238869"
+     y="80.96946"
+     style="font-size:9.25221175px;stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       x="27.238869"
+       y="80.96946"
+       class="st2 st3 st4 st6"
+       id="tspan116"
+       style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Y</tspan><tspan
+       x="31.81517"
+       y="80.96946"
+       class="st2 st3 st4"
+       id="tspan118"
+       style="stroke-width:1.01696;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-family:ProximaNova-Bold;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:9.25221175px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">emen</tspan></text></g>
+<g
+   id="afghanistan"><g
+     id="g133">
+		<text
+   transform="matrix(1,0,0,1.0342,5.8076,7.0069)"
+   id="text129"><tspan
+     x="0"
+     y="0"
+     class="st2 st3 st4"
+     id="tspan125"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.7022px;font-family:ProximaNova-Bold;-inkscape-font-specification:'ProximaNova-Bold, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Afghanistan</tspan></text>
+		<path
+   class="st5"
+   d="M 218.5,9.3 H 70.6 c -2.2,0 -4,-1.8 -4,-4 V 4.5 c 0,-2.2 1.8,-4 4,-4 h 147.9 c 2.2,0 4,1.8 4,4 v 0.8 c 0,2.2 -1.8,4 -4,4"
+   id="path131" />
+	</g></g>
 </svg>

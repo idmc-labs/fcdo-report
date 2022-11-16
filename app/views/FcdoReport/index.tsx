@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { _cs } from '@togglecorp/fujs';
+import ImageZoom from 'react-image-zooom';
 import {
     MdPictureAsPdf,
     MdArrowRightAlt,
@@ -21,6 +22,7 @@ import Button from '#components/Button';
 import Header from '#components/Header';
 import TextOutput from '#components/TextOutput';
 import ButtonLikeLink from '#components/ButtonLikeLink';
+import DownloadInfographicLink from '#components/DownloadInfographicLink';
 import Quote from '#components/Quote';
 import useBooleanState from '#hooks/useBooleanState';
 import Svg from '#components/Svg';
@@ -36,11 +38,9 @@ import coverImage3 from '#resources/img/cover-img3.jpg';
 import coverImage2 from '#resources/img/cover-img2.jpg';
 import coverImage4 from '#resources/img/cover-img4.jpg';
 import coverImage5 from '#resources/img/cover-img5.jpg';
-import keyFinding1 from '#resources/img/key-finding1.png';
-import keyFinding2 from '#resources/img/key-finding2.png';
-import keyFinding3 from '#resources/img/key-finding3.png';
 import idmcLogo from '#resources/img/idmc-white.svg';
 import bannerImg1 from '#resources/img/banner-img1.jpg';
+import Image from '#components/Image';
 
 import {
     heroParagraph1,
@@ -92,7 +92,43 @@ import styles from './styles.css';
 const svgTitles = [
     {
         key: 'afghanistan',
-        title: 'Test',
+        title: '1,974,000',
+    },
+    {
+        key: 'drcongo', title: '1,925,000',
+    },
+    {
+        key: 'syria', title: '1,682,000',
+    },
+    {
+        key: 'yemen', title: '1,359,000',
+    },
+    {
+        key: 'ethiopia', title: '1,343,000',
+    },
+    {
+        key: 'nigeria', title: '1,123,000',
+    },
+    {
+        key: 'somalia', title: '1,053,000',
+    },
+    {
+        key: 'sudan', title: '1,045,000',
+    },
+    {
+        key: 'colombia', title: '1,038,000',
+    },
+    {
+        key: 'south Sudan', title: '620,000',
+    },
+    {
+        key: 'iraq', title: '370,000',
+    },
+    {
+        key: 'mozambique', title: '303,000',
+    },
+    {
+        key: 'myanmar', title: '149,000',
     },
 ];
 
@@ -158,27 +194,27 @@ const keyFindings = [
     {
         key: '1',
         description: 'There were 14 million IDPs aged five to 17 in the 13 countries studied at the end of 2021. This includes 7.1 million boys and 6.9 million girls.',
-        image: keyFinding1,
+        image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-1.png',
     },
     {
         key: '2',
         description: 'Afghanistan, the Democractic Republic of the Congo and Syria had the highest number of school-aged IDPs, with two million, 1.9 and 1.7 million respectively.',
-        image: keyFinding2,
+        image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-2.png',
     },
     {
         key: '3',
-        description: 'More than nice million internally displaced children could be at risk of missing out on education because they did not receive support through humanitarian response plans in 2021.',
-        image: keyFinding3,
+        description: 'More than nine million internally displaced children could be at risk of missing out on education because they did not receive support through humanitarian response plans in 2021.',
+        image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-3.png',
     },
     {
         key: '4',
         description: 'We estimate the average cost of providing one IDP with education support via humanitarian response plans for a year to be between $82 and $93.',
-        image: keyFinding3,
+        image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-4.png',
     },
     {
         key: '5',
         description: 'The cost of providing a year’s education support for all school-aged IDPs in the 13 countries studied would be between $1.1 billion and $1.3 billion.',
-        image: keyFinding3,
+        image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-5.png',
     },
 ];
 
@@ -269,7 +305,7 @@ function FcdoReport(props: Props) {
                     }
                 });
             },
-            200,
+            2000,
         );
 
         return () => {
@@ -324,7 +360,7 @@ function FcdoReport(props: Props) {
                 Estimating the education costs for IDPs
             </Button>
             <Button
-                name="access"
+                name="access-to-quality-education"
                 onClick={handleNavClick}
                 className={_cs(
                     styles.navItem,
@@ -492,13 +528,11 @@ function FcdoReport(props: Props) {
                                 data={keyFindings}
                             />
                         </div>
-                        <img
+                        <Image
                             className={styles.keyFindingsImg}
                             src={keyFindings?.find((item) => item.key === selectedKeyFinding)
                                 ?.image}
                             alt=""
-                            width={600}
-                            height={790}
                         />
                     </div>
                 </div>
@@ -533,7 +567,7 @@ function FcdoReport(props: Props) {
                         </div>
                         <div className={styles.rightContainer}>
                             <img
-                                src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Data-Gap.png"
+                                src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Data-Gap.gif"
                                 className={styles.background}
                                 alt=""
                             />
@@ -564,9 +598,10 @@ function FcdoReport(props: Props) {
                             {dataInternallyDisplacedDescription2}
                         </p>
                     </div>
-                    <div className={styles.barChartTitle}>
-                        {barChartTitle}
-                    </div>
+                    <Header
+                        className={styles.barChartTitle}
+                        heading={barChartTitle}
+                    />
                     <div className={styles.barChartContent}>
                         <div className={styles.topContainer}>
                             <div className={styles.barChart}>
@@ -585,46 +620,55 @@ function FcdoReport(props: Props) {
                                     {barChartCaption}
                                 </div>
                             </div>
-                            <div className={styles.smallBarChart}>
-                                <Header
-                                    className={styles.header}
-                                    headingClassName={styles.conflict}
-                                    heading="13m"
-                                    headingDescription="by conflict and violence"
-                                    headingSize="large"
-                                    hideHeadingBorder
-                                />
-                                <Svg
-                                    src={barChart2}
-                                    className={styles.smallBar}
-                                />
+                            <div className={styles.rightContainer}>
+                                <div className={styles.barCharts}>
+                                    <div className={styles.smallBarChart}>
+                                        <Header
+                                            className={styles.header}
+                                            headingClassName={styles.conflict}
+                                            heading="13m"
+                                            headingDescription="by conflict and violence"
+                                            headingSize="large"
+                                            hideHeadingBorder
+                                        />
+                                        <Svg
+                                            src={barChart2}
+                                            className={styles.smallBar}
+                                        />
+                                    </div>
+                                    <div className={styles.smallBarChart}>
+                                        <Header
+                                            className={styles.header}
+                                            heading="1m"
+                                            headingClassName={styles.disaster}
+                                            headingDescription="by disaster"
+                                            headingSize="large"
+                                            hideHeadingBorder
+                                        />
+                                        <Svg
+                                            src={barChart3}
+                                            className={styles.smallBar}
+                                        />
+                                    </div>
+                                </div>
                                 <div className={styles.smallBarCaption}>
                                     {barChartCaption}
                                 </div>
                             </div>
-                            <div className={styles.smallBarChart}>
-                                <Header
-                                    className={styles.header}
-                                    heading="1m"
-                                    headingClassName={styles.disaster}
-                                    headingDescription="by disaster"
-                                    headingSize="large"
-                                    hideHeadingBorder
-                                />
-                                <Svg
-                                    src={barChart3}
-                                    className={styles.smallBar}
-                                />
-                            </div>
                         </div>
-                        <ButtonLikeLink
-                            name={undefined}
-                            href={dataSetLink}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                        >
-                            Download Dataset
-                        </ButtonLikeLink>
+                        <div className={styles.bottomContainer}>
+                            <DownloadInfographicLink
+                                link="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Data_on_internally_displaced_children.png"
+                            />
+                            <ButtonLikeLink
+                                name={undefined}
+                                href={dataSetLink}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                Download Dataset
+                            </ButtonLikeLink>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -658,16 +702,20 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph2}
                             </p>
-                            <img
+                            <ImageZoom
                                 src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs.png"
                                 className={styles.background}
                                 alt=""
+                            />
+                            <DownloadInfographicLink
+                                className={styles.downloadLink}
+                                link="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Access_to_quality_education.png"
                             />
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph3}
                             </p>
                         </div>
-                        <img
+                        <ImageZoom
                             src={tableData}
                             className={styles.background}
                             alt=""
@@ -675,6 +723,9 @@ function FcdoReport(props: Props) {
                         <div className={styles.estimatedCaption}>
                             {estimatedCaption}
                             <div className={styles.datasetButton}>
+                                <DownloadInfographicLink
+                                    link="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Estimating_the_education_cost_for_IDPs.png"
+                                />
                                 <ButtonLikeLink
                                     name={undefined}
                                     href={dataSetLink}
@@ -712,14 +763,18 @@ function FcdoReport(props: Props) {
                     />
                     <div className={styles.idAccessContainer}>
                         <div className={styles.belowImgContainer}>
-                            <img
+                            <ImageZoom
                                 src={ageGender}
-                                className={styles.background}
+                                className={styles.ageGenderImage}
                                 alt=""
                             />
                             <p className={styles.descriptionCaption}>
                                 {descriptionCaption}
                             </p>
+                            <DownloadInfographicLink
+                                className={styles.downloadLink}
+                                link="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Access_to_quality_education.png"
+                            />
                         </div>
                         <div className={styles.descriptionContainer}>
                             <p className={styles.descriptionParagraph}>

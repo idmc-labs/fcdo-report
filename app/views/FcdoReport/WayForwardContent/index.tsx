@@ -1,4 +1,5 @@
 import React, { useCallback, useRef, useEffect } from 'react';
+import ImageZoom from 'react-image-zooom';
 import { _cs, isDefined } from '@togglecorp/fujs';
 
 import useBooleanState from '#hooks/useBooleanState';
@@ -12,7 +13,7 @@ import styles from './styles.css';
 interface Description {
     key: string;
     description: React.ReactNode;
-    image?: React.ReactNode;
+    image?: string;
 }
 
 const itemKeySelector = (item: Description) => item.key;
@@ -21,6 +22,7 @@ interface ItemProps {
     className?: string;
     order: string;
     description: React.ReactNode;
+    image?: string;
     active?: boolean;
     itemKey: string;
     onItemClick?: (itemKey: string) => void;
@@ -33,6 +35,7 @@ function Item(props: ItemProps) {
         description,
         active = false,
         itemKey,
+        image,
         onItemClick,
     } = props;
 
@@ -91,18 +94,27 @@ function Item(props: ItemProps) {
             )}
             disabled={!isDefined(onItemClick)}
         >
-            <div className={styles.order}>
-                {order}
-            </div>
-            <div
-                className={styles.description}
-            >
-                {description}
-            </div>
-            {onItemClick && (
-                <div>
-                    {active ? '>' : ' '}
+            <div className={styles.topContainer}>
+                <div className={styles.order}>
+                    {order}
                 </div>
+                <div
+                    className={styles.description}
+                >
+                    {description}
+                </div>
+                {onItemClick && (
+                    <div>
+                        {active ? '>' : ' '}
+                    </div>
+                )}
+            </div>
+            {image && active && (
+                <ImageZoom
+                    className={styles.image}
+                    src={image}
+                    alt=""
+                />
             )}
         </RawButton>
     );
@@ -123,7 +135,7 @@ function WayForwardContent(props: Props) {
         onItemClick,
     } = props;
 
-    const itemRendererParams = useCallback((key: string, item: Description) => ({
+    const itemRendererParams = useCallback((key: string, item: Description): ItemProps => ({
         order: item.key,
         itemKey: key,
         description: item.description,

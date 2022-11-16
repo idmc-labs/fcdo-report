@@ -1,0 +1,8 @@
+.download-infographic-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--tui-font-color-text);
+    font-weight: var(--tui-font-weight-bold);
+    gap: var(--tui-spacing-extra-small);
+}

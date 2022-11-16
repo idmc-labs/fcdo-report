@@ -94,6 +94,7 @@
         flex-shrink: 0;
         z-index: 1;
         background-color: #ffffff;
+        padding-top: var(--tui-spacing-small);
         width: 100%;
         overflow-y: auto;
 
@@ -240,7 +241,7 @@
                 display: flex;
                 align-items: flex-start;
                 gap: var(--tui-spacing-large);
-                
+
                 .key-findings-title {
                     display: flex;
                     flex-direction: column;
@@ -250,18 +251,17 @@
                 }
 
                 .key-findings-img {
+                    align-self: flex-end;
+                    flex-shrink: 0;
                     width: 33rem;
-                    height: 100%;
-                    object-position: 0% 98%;
                     object-fit: contain;
 
-                    @media (max-width: 880px) {
-                        width: 100%;
-                        height: auto;
+                    @media (max-width: 1092px) {
+                        display: none;
                     }
                 }
 
-                @media (max-width: 880px) { 
+                @media (max-width: 880px) {
                     display: flex;
                     flex-direction: column;
                 }
@@ -284,19 +284,36 @@
             }
 
             .description {
+                display: flex;
+                flex-direction: column;
+                gap: var(--tui-spacing-medium);
+
                 .description-paragraph {
-                    margin: var(--tui-spacing-medium) auto;
+                    margin: 0 auto;
                     max-width: 60rem;
                     font-size: var(--tui-font-size-medium);
                 }
             }
+            .download-link {
+                align-self: flex-end;
+            }
+
             .estimated-caption {
                 display: flex;
                 justify-content: space-between;
                 font-style: italic;
 
                 .dataset-button {
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+                    flex-wrap: wrap;
                     font-style: normal;
+                    gap: var(--tui-spacing-medium);
+                }
+
+                @media (max-width: 880px) {
+                    flex-direction: column;
                 }
             }
         }
@@ -392,12 +409,11 @@
         align-items: center;
         flex-direction: column;
     }
-    
+
     .bar-chart-content {
         display: flex;
         align-items: flex-end;
         flex-direction: column;
-        gap: var(--tui-spacing-mega-large);
 
         .top-container {
             display: flex;
@@ -423,33 +439,51 @@
                     font-size: var(--tui-spacing-small);
                 }
             }
-            .small-bar-chart {
+
+            .right-container {
                 display: flex;
-                flex-basis: calc(32% - var(--tui-spacing-super-large) * 2 / 3);
                 flex-direction: column;
-                flex-shrink: 0;
-                gap: var(--tui-spacing-extra-large);
 
-                .header {
-                    text-align: center;
+                .bar-charts {
+                    display: flex;
+                    align-self: center;
+                    flex-shrink: 1;
+                    flex-wrap: wrap;
+                    gap: var(--tui-spacing-mega-large);
 
-                    .conflict {
-                        color: var(--color-conflict);
+                    .small-bar-chart {
+                        display: flex;
+                        flex-basis: calc(50% - var(--tui-spacing-super-large));
+                        flex-direction: column;
+                        flex-shrink: 0;
+                        gap: var(--tui-spacing-extra-large);
+
+                        .header {
+                            text-align: center;
+
+                            .conflict {
+                                color: var(--color-conflict);
+                            }
+
+                            .disaster {
+                                color: var(--color-disaster);
+                            }
+                        }
+
+                        .small-bar {
+                            height: 30rem;
+                        }
                     }
 
-                    .disaster {
-                        color: var(--color-disaster);
+                    @media (max-width: 880px) {
+                        flex-direction: column;
                     }
-                }
-
-                .small-bar {
-                    height: 30rem;
                 }
 
                 .small-bar-caption {
                     display: flex;
                     flex-direction: column;
-                    margin-top: var(--tui-spacing-mega-large);
+                    margin-top: 4.8rem;
                     font-size: var(--tui-spacing-small);
                 }
             }
@@ -457,6 +491,13 @@
             @media (max-width: 880px) {
                 flex-direction: column;
             }
+        }
+
+        .bottom-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: var(--tui-spacing-medium);
         }
 
         .bar-caption {
@@ -592,16 +633,25 @@
                 gap: var(--tui-spacing-large);
 
                 .below-img-container {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
                     max-width: 50%;
-                    .background {
+
+                    .age-gender-image {
                         width: 100%;
                     }
+
                     .description-caption {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         font-size: var(--tui-font-size-extra-small);
                         font-style: italic;
+                    }
+
+                    .download-link {
+                        align-self: flex-end;
                     }
 
                     @media (max-width: 880px) {
