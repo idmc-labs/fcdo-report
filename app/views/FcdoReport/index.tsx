@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { _cs } from '@togglecorp/fujs';
+import ImageZoom from 'react-image-zooom';
 import {
     MdPictureAsPdf,
     MdArrowRightAlt,
@@ -701,7 +702,7 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph2}
                             </p>
-                            <img
+                            <ImageZoom
                                 src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs.png"
                                 className={styles.background}
                                 alt=""
@@ -714,7 +715,7 @@ function FcdoReport(props: Props) {
                                 {estimatingEducationParagraph3}
                             </p>
                         </div>
-                        <img
+                        <ImageZoom
                             src={tableData}
                             className={styles.background}
                             alt=""
@@ -762,7 +763,7 @@ function FcdoReport(props: Props) {
                     />
                     <div className={styles.idAccessContainer}>
                         <div className={styles.belowImgContainer}>
-                            <img
+                            <ImageZoom
                                 src={ageGender}
                                 className={styles.ageGenderImage}
                                 alt=""

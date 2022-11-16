@@ -3,4 +3,5 @@
     align-items: center;
     justify-content: center;
     background-color: var(--tui-color-background);
+    height: 100%;
 }

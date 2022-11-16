@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { _cs } from '@togglecorp/fujs';
+import ImageZoom from 'react-image-zooom';
 
 import styles from './styles.css';
 
@@ -71,7 +72,7 @@ function MyImage(props: Props) {
 
     const { isLoading, hasImage } = useImage({ src, srcSet });
 
-    if (!hasImage || isLoading) {
+    if (!hasImage || isLoading || !src) {
         return (
             <div className={_cs(styles.noImage, className)}>
                 Loading...
@@ -80,10 +81,9 @@ function MyImage(props: Props) {
     }
 
     return (
-        <img
-            className={_cs(styles.image, className)}
+        <ImageZoom
+            className={_cs(className)}
             src={src}
-            srcSet={srcSet}
             alt={alt}
         />
     );
