@@ -36,6 +36,7 @@
     }
 
     .description {
+        font-family: var(--tui-font-family-heading);
         font-size: var(--tui-font-size-medium);
     }
 
