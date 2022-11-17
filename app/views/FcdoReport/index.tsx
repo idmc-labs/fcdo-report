@@ -134,14 +134,9 @@ const svgTitles = [
 
 const sectionOptions = [
     {
-        key: 'foreward',
-        label: 'Foreward',
-        startPage: '7',
-    },
-    {
         label: 'Key Messages and Findings',
         key: 'Key Messages and Findings',
-        startPage: '8',
+        startPage: '4',
     },
     {
         label: 'Introduction',
@@ -156,7 +151,7 @@ const sectionOptions = [
     {
         label: 'Access to quality education',
         key: 'Access to Quality Education',
-        startPage: '8',
+        startPage: '10',
     },
     {
         label: 'Education Costs',
@@ -432,7 +427,7 @@ function FcdoReport(props: Props) {
                         navMenuItems
                     ) : (
                         <PopupButton
-                            label="In Summary"
+                            label="In summary"
                             name="explore-the-data"
                             onClick={handleNavClick}
                             componentRef={popupElementRef}
