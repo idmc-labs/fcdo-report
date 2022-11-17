@@ -203,7 +203,7 @@ const keyFindings = [
     },
     {
         key: '4',
-        description: 'We estimate the average cost of providing one IDP with education support via humanitarian response plans for a year to be between $82 and $93.',
+        description: 'We estimate the average cost of providing one IDP with education support via humanitarian response plans for a year to be between $81 and $93.',
         image: 'https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs_Key-finding-4.png',
     },
     {

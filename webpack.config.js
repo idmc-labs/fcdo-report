@@ -147,6 +147,9 @@ module.exports = () => {
                     viewport: 'width=device-width, initial-scale=1.0',
                     description: pkg.description,
                     referrer: 'origin',
+                    'og:title': 'IDMC - Informing better access to education for IDPs',
+                    'og:image': 'https://www.internal-displacement.org/sites/default/files/2022-11/221117_idmc_informing_better_access_to_education_for_idps_banner.jpg',
+                    'og:description': 'There were 59.1 million people living in internal displacement worldwide at the end of 2021, the highest figure on record. The exact number of children among them is unknown, but there are estimated to be about 9.9 million aged between five and 11, and 7.5 million between 12 and 17.',
                 },
             }),
             /*
