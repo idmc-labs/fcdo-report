@@ -709,7 +709,7 @@ function FcdoReport(props: Props) {
                             />
                             <DownloadInfographicLink
                                 className={styles.downloadLink}
-                                link="https://www.internal-displacement.org/sites/default/files/2211114_IDMC_FCDO_Report_Access_to_quality_education.png"
+                                link="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs.png"
                             />
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph3}

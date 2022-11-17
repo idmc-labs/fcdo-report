@@ -1,8 +1,8 @@
 {
     "name": "fcdo-report",
-    "longName": "FCDO Education Cost Children Landing Page",
+    "longName": "IDMC - Informing better access to education for IDPs",
     "version": "1.0.0",
-    "description": "FCDO Education Cost Children Landing Page",
+    "description": "IDMC - Informing better access to education for IDPs",
     "scripts": {
         "deploy:dev": "test -d build && cp -f build/index.html build/200.html && surge --domain idmc-website-components.surge.sh build/",
         "test": "jest",
