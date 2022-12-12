@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { _cs } from '@togglecorp/fujs';
-import ImageZoom from 'react-image-zooom';
+import InnerImageZoom from 'react-inner-image-zoom';
 import {
     MdPictureAsPdf,
     MdArrowRightAlt,
@@ -532,7 +532,6 @@ function FcdoReport(props: Props) {
                             className={styles.keyFindingsImg}
                             src={keyFindings?.find((item) => item.key === selectedKeyFinding)
                                 ?.image}
-                            alt=""
                         />
                     </div>
                 </div>
@@ -702,10 +701,9 @@ function FcdoReport(props: Props) {
                             <p className={styles.descriptionParagraph}>
                                 {estimatingEducationParagraph2}
                             </p>
-                            <ImageZoom
+                            <InnerImageZoom
                                 src="https://www.internal-displacement.org/sites/default/files/221114_IDMC_Equation-Estimating-the-education-costs-for-IDPs.png"
                                 className={styles.background}
-                                alt=""
                             />
                             <DownloadInfographicLink
                                 className={styles.downloadLink}
@@ -715,10 +713,9 @@ function FcdoReport(props: Props) {
                                 {estimatingEducationParagraph3}
                             </p>
                         </div>
-                        <ImageZoom
+                        <InnerImageZoom
                             src={tableData}
                             className={styles.background}
-                            alt=""
                         />
                         <div className={styles.estimatedCaption}>
                             {estimatedCaption}
@@ -763,10 +760,9 @@ function FcdoReport(props: Props) {
                     />
                     <div className={styles.idAccessContainer}>
                         <div className={styles.belowImgContainer}>
-                            <ImageZoom
+                            <InnerImageZoom
                                 src={ageGender}
                                 className={styles.ageGenderImage}
-                                alt=""
                             />
                             <p className={styles.descriptionCaption}>
                                 {descriptionCaption}

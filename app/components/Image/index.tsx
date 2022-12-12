@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { _cs } from '@togglecorp/fujs';
-import ImageZoom from 'react-image-zooom';
+import InnerImageZoom from 'react-inner-image-zoom';
+
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 
 import styles from './styles.css';
 
@@ -59,7 +61,6 @@ export interface Props {
     className?: string;
     src?: string;
     srcSet?: string;
-    alt?: string;
 }
 
 function MyImage(props: Props) {
@@ -67,7 +68,6 @@ function MyImage(props: Props) {
         className,
         src,
         srcSet,
-        alt = '',
     } = props;
 
     const { isLoading, hasImage } = useImage({ src, srcSet });
@@ -81,10 +81,10 @@ function MyImage(props: Props) {
     }
 
     return (
-        <ImageZoom
+        <InnerImageZoom
             className={_cs(className)}
             src={src}
-            alt={alt}
+            hideHint
         />
     );
 }

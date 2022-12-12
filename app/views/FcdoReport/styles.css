@@ -123,7 +123,7 @@
     .hero {
         position: relative;
         background-color: var(--tui-color-brand-light);
-        background-image: url('../../resources/img/cover-img.jpg');
+        background-image: url('https://www.internal-displacement.org/sites/default/files/2022-11/221117_idmc_informing_better_access_to_education_for_idps_banner.jpg');
         background-position: right top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -710,7 +710,7 @@
     .footer {
         position: relative;
         background-color: var(--tui-color-brand-light);
-        background-image: url('../../resources/img/cover-img.jpg');
+        background-image: url('https://www.internal-displacement.org/sites/default/files/2022-11/221117_idmc_informing_better_access_to_education_for_idps_banner.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

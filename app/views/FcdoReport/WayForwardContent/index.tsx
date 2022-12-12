@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useEffect } from 'react';
-import ImageZoom from 'react-image-zooom';
+import InnerImageZoom from 'react-inner-image-zoom';
 import { _cs, isDefined } from '@togglecorp/fujs';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 
 import useBooleanState from '#hooks/useBooleanState';
 import { List, RawButton } from '@togglecorp/toggle-ui';
@@ -110,10 +111,9 @@ function Item(props: ItemProps) {
                 )}
             </div>
             {image && active && (
-                <ImageZoom
+                <InnerImageZoom
                     className={styles.image}
                     src={image}
-                    alt=""
                 />
             )}
         </RawButton>
